@@ -1,0 +1,220 @@
+@mixin bg {
+  width: 100%;
+  background: $bgcolor;
+  background: -webkit-linear-gradient(
+      to right,
+      hsla(12, 79%, 59%, 0.61),
+      hsla(296, 31%, 45%, 0.603)
+    ),
+    url(/multimedia/portada.jpg);
+  background: linear-gradient(
+      to right,
+      hsla(12, 79%, 59%, 0.61),
+      hsla(296, 31%, 45%, 0.603)
+    ),
+    url(/multimedia/portada.jpg);
+  height: 100vh;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+@mixin btn-whats {
+  display: block;
+  position: fixed;
+  width: 60px;
+  height: 70px;
+  bottom: 20px;
+  left: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  z-index: 999;
+  line-height: 80px;
+}
+
+
+@mixin h1 {
+  font-size: $tam-5;
+  color: $color-pri;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  margin-bottom: 5rem;
+}
+
+@mixin h1destacado {
+  color: $color-pri;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 10rem;
+  font-size: $tam-5;
+  margin: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+@mixin h2 {
+  font-size: $tam-4;
+  color: $color-pri;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@mixin h2destacado {
+  font-size: $tam-4;
+  color: $color-pri;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+@mixin h3 {
+  font-size: $tam-3;
+  color: $color-pri;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@mixin h3orden {
+  text-align: right;
+  color: #030303;
+  margin-bottom: 5rem;
+  font-size: $tam-3;
+  font-weight: 400;
+}
+
+@mixin h6copy {
+  font-size: $tam-1;
+  color: $color-sec;
+  text-align: center;
+}
+
+@mixin h6 {
+  font-size: $tam-2;
+  color: $color-sec;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+@mixin h5 {
+  font-size: $tam-3;
+  color: $color-pri;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* @mixin img-carousel {
+  height: 550px;
+  object-fit: cover;
+} */
+
+@mixin footer {
+  background: #e96443;
+  background: -webkit-linear-gradient(
+    to right,
+    hsla(12, 79%, 59%, 0.61),
+    hsla(296, 31%, 45%, 0.603)
+  );
+  background: linear-gradient(
+    to right,
+    hsla(12, 79%, 59%, 0.61),
+    hsla(296, 31%, 45%, 0.603)
+  );
+  background-size: 100% 100%;
+  width: 100%;
+  margin-top: 8rem;
+}
+
+@mixin icon {
+  color: $color-sec;
+  font-size: 3.5rem;
+  padding: 0.5rem;
+  transform: rotate(0);
+}
+
+@mixin iconhover {
+  transform: rotate(360deg);
+  transition: all 0.3s linear;
+}
+
+@mixin iconos {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+@mixin infor {
+  color: $color-pri;
+  font-size: $tam-2;
+  margin: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@mixin redes {
+  color: $color-sec;
+  padding: 1rem;
+  margin: 1rem;
+  transform: rotate(0);
+}
+
+@mixin redeshover {
+  transform: rotate(360deg);
+  transition: all 0.3s linear;
+}
+
+@mixin boton {
+  margin-top: 5rem;
+  padding: 0.5rem;
+  border: transparent;
+  background: $color-pri;
+  color: $color-sec;
+  width: 40%;
+  margin-left: 8rem;
+  font-size: $tam-2;
+  border-radius: 15rem;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+@mixin relleno {
+  width: 75%;
+  padding: 0.5rem;
+  font-weight: 400;
+  outline: 0;
+  margin-left: 8rem !important;
+  margin-right: 4rem;
+  box-sizing: border-box;
+}
+
+@mixin textarea {
+  width: 100%;
+  padding: 1rem;
+  color: $color-pri;
+  font-weight: 400;
+  outline: 0;
+  margin-left: 4rem;
+  box-sizing: border-box;
+  max-width: 90%;
+  min-width: 80%;
+  min-height: 25rem;
+  max-height: 40rem;
+}
+
+@mixin p {
+  font-size: $tam-2;
+  color: $color-negro;
+  text-align: justify;
+  margin-bottom: $tam-4;
+}

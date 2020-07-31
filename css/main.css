@@ -1,0 +1,543 @@
+@charset "UTF-8";
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+/* @mixin img-carousel {
+  height: 550px;
+  object-fit: cover;
+} */
+body {
+  font-family: normal "Roboto Condensed", sans-serif;
+  font-size: 2rem; }
+
+#ml {
+  margin-left: auto; }
+
+header {
+  width: 100%;
+  background: #e964435e;
+  background: -webkit-linear-gradient(to right, rgba(233, 101, 68, 0.61), rgba(146, 79, 150, 0.603)), url(/multimedia/portada.jpg);
+  background: linear-gradient(to right, rgba(233, 101, 68, 0.61), rgba(146, 79, 150, 0.603)), url(/multimedia/portada.jpg);
+  height: 100vh;
+  background-size: 100% 100%;
+  background-attachment: fixed; }
+  header .btn-whats {
+    display: block;
+    position: fixed;
+    width: 60px;
+    height: 70px;
+    bottom: 20px;
+    left: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 50px;
+    z-index: 999;
+    line-height: 80px; }
+    header .btn-whats i {
+      color: #25d366; }
+      header .btn-whats i:hover {
+        transition: all 0.2s;
+        transform: scale(1.5); }
+  header nav .logo {
+    width: 50%; }
+  header nav ul {
+    width: 100%; }
+    header nav ul li {
+      list-style: none;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 1rem;
+      font-weight: 400; }
+      header nav ul li a {
+        color: #fcfcfc; }
+        header nav ul li a:hover {
+          color: #c50d4a; }
+      header nav ul li .subli {
+        background-color: transparent; }
+        header nav ul li .subli .subitem {
+          color: #fcfcfc;
+          font-size: 1.8rem;
+          background-color: transparent; }
+          header nav ul li .subli .subitem:hover {
+            color: #c50d4a; }
+  header .wave {
+    height: 30vh;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    stroke: none;
+    fill: #fcfcfc; }
+
+.imagenes h3 {
+  font-size: 2.5rem;
+  color: #c50d4a;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem; }
+
+.imagenes p {
+  font-size: 2rem;
+  color: #3f3f3f;
+  text-align: justify;
+  margin-bottom: 3rem;
+  color: #fcfcfc;
+  text-align: center; }
+
+.container .product {
+  margin-top: 10rem; }
+  .container .product h2 {
+    font-size: 3rem;
+    color: #c50d4a;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem; }
+  .container .product h3 {
+    font-size: 2.5rem;
+    color: #c50d4a;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem; }
+
+.container .destacado {
+  padding-top: 7rem; }
+  .container .destacado h1 {
+    color: #c50d4a;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 10rem;
+    font-size: 3.5rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-transform: uppercase; }
+  .container .destacado h2 {
+    font-size: 3rem;
+    color: #c50d4a;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    text-transform: uppercase; }
+
+.footer {
+  background: #e96443;
+  background: -webkit-linear-gradient(to right, rgba(233, 101, 68, 0.61), rgba(146, 79, 150, 0.603));
+  background: linear-gradient(to right, rgba(233, 101, 68, 0.61), rgba(146, 79, 150, 0.603));
+  background-size: 100% 100%;
+  width: 100%;
+  margin-top: 8rem; }
+  .footer .copy {
+    margin-bottom: 6rem;
+    margin-top: 2rem; }
+    .footer .copy h6 {
+      font-size: 1.5rem;
+      color: #fcfcfc;
+      text-align: center; }
+  .footer h5 {
+    font-size: 2.5rem;
+    color: #c50d4a;
+    margin-bottom: 0.5rem;
+    text-align: center; }
+  .footer h6 {
+    font-size: 2rem;
+    color: #fcfcfc;
+    text-align: center;
+    margin-bottom: 2.5rem; }
+  .footer .iconos {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem; }
+  .footer .f {
+    color: #fcfcfc;
+    padding: 1rem;
+    margin: 1rem;
+    transform: rotate(0); }
+    .footer .f:hover {
+      transform: rotate(360deg);
+      transition: all 0.3s linear;
+      color: #1778f2; }
+  .footer .t {
+    color: #fcfcfc;
+    padding: 1rem;
+    margin: 1rem;
+    transform: rotate(0); }
+    .footer .t:hover {
+      transform: rotate(360deg);
+      transition: all 0.3s linear;
+      color: #1da1f2; }
+  .footer .i {
+    color: #fcfcfc;
+    padding: 1rem;
+    margin: 1rem;
+    transform: rotate(0); }
+    .footer .i:hover {
+      transform: rotate(360deg);
+      transition: all 0.3s linear;
+      color: #f84279de; }
+
+.articulos {
+  margin-bottom: 5rem; }
+  .articulos .tienda h1 {
+    font-size: 3.5rem;
+    color: #c50d4a;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 5rem; }
+  .articulos .orden h3 {
+    text-align: right;
+    color: #030303;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    font-weight: 400; }
+  .articulos .select {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .articulos .categoria {
+    display: flex;
+    flex-direction: column; }
+    .articulos .categoria h3 {
+      font-size: 2.5rem;
+      color: #c50d4a;
+      font-weight: 400;
+      text-align: center;
+      padding: 1rem;
+      margin: 1rem;
+      margin-bottom: 3rem;
+      font-weight: 600; }
+    .articulos .categoria div {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between; }
+      .articulos .categoria div p input {
+        margin-top: 1rem; }
+      .articulos .categoria div h4 {
+        margin-bottom: 0 !important;
+        font-size: 2rem; }
+  .articulos .tamano {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem; }
+    .articulos .tamano h3 {
+      font-size: 2.5rem;
+      color: #c50d4a;
+      font-weight: 400;
+      text-align: center;
+      padding: 1rem;
+      margin: 1rem;
+      margin-bottom: 3rem;
+      font-weight: 600; }
+    .articulos .tamano div {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between; }
+      .articulos .tamano div p input {
+        margin-top: 1rem; }
+      .articulos .tamano div h4 {
+        margin-bottom: 0 !important;
+        font-size: 2rem; }
+    .articulos .tamano .boton {
+      margin-top: 5rem;
+      padding: 0.5rem;
+      border: transparent;
+      background: #c50d4a;
+      color: #fcfcfc;
+      width: 40%;
+      margin-left: 8rem;
+      font-size: 2rem;
+      border-radius: 15rem;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5); }
+  .articulos .foto {
+    margin-top: 5rem; }
+  .articulos .frase {
+    margin-top: 10rem; }
+    .articulos .frase h2 {
+      font-size: 3rem;
+      color: #c50d4a;
+      font-weight: 400;
+      text-align: center;
+      padding: 1rem;
+      margin: 1rem; }
+  .articulos .img {
+    display: flex;
+    justify-content: center; }
+
+.informacion {
+  margin-bottom: 5rem; }
+  .informacion .contacto h1 {
+    font-size: 3.5rem;
+    color: #c50d4a;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 5rem; }
+  .informacion .info {
+    background: #e964435e; }
+    .informacion .info .items {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      margin-top: 3rem; }
+      .informacion .info .items div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center; }
+        .informacion .info .items div .mail {
+          color: #fcfcfc;
+          font-size: 3.5rem;
+          padding: 0.5rem;
+          transform: rotate(0);
+          margin-right: 7.5rem; }
+          .informacion .info .items div .mail:hover {
+            transform: rotate(360deg);
+            transition: all 0.3s linear;
+            color: #fcfcfc; }
+        .informacion .info .items div .cel {
+          color: #fcfcfc;
+          font-size: 3.5rem;
+          padding: 0.5rem;
+          transform: rotate(0);
+          margin-right: 8.5rem; }
+          .informacion .info .items div .cel:hover {
+            transform: rotate(360deg);
+            transition: all 0.3s linear;
+            color: #3f3f3f; }
+        .informacion .info .items div .dir {
+          color: #fcfcfc;
+          font-size: 3.5rem;
+          padding: 0.5rem;
+          transform: rotate(0); }
+          .informacion .info .items div .dir:hover {
+            transform: rotate(360deg);
+            transition: all 0.3s linear;
+            color: #DD4B3E; }
+        .informacion .info .items div h6 {
+          color: #c50d4a;
+          font-size: 2rem;
+          margin: 1rem;
+          padding: 1rem;
+          margin-bottom: 0.5rem; }
+    .informacion .info .iconos {
+      display: flex;
+      justify-content: center;
+      font-size: 3.5rem;
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 2rem; }
+      .informacion .info .iconos .f {
+        color: #fcfcfc;
+        padding: 1rem;
+        margin: 1rem;
+        transform: rotate(0); }
+        .informacion .info .iconos .f:hover {
+          transform: rotate(360deg);
+          transition: all 0.3s linear;
+          color: #1778f2; }
+      .informacion .info .iconos .t {
+        color: #fcfcfc;
+        padding: 1rem;
+        margin: 1rem;
+        transform: rotate(0); }
+        .informacion .info .iconos .t:hover {
+          transform: rotate(360deg);
+          transition: all 0.3s linear;
+          color: #1da1f2; }
+      .informacion .info .iconos .i {
+        color: #fcfcfc;
+        padding: 1rem;
+        margin: 1rem;
+        transform: rotate(0); }
+        .informacion .info .iconos .i:hover {
+          transform: rotate(360deg);
+          transition: all 0.3s linear;
+          color: #f84279de; }
+    .informacion .info .mapa {
+      padding: 3rem 0 3rem 9rem; }
+  .informacion .formulario {
+    background: #e964435e; }
+    .informacion .formulario .form {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center; }
+      .informacion .formulario .form h3 {
+        font-size: 2.5rem;
+        color: #c50d4a;
+        font-weight: 400;
+        text-align: center;
+        padding: 1rem;
+        margin: 1rem;
+        margin-bottom: 0;
+        margin-top: 2rem; }
+      .informacion .formulario .form input {
+        width: 75%;
+        padding: 0.5rem;
+        font-weight: 400;
+        outline: 0;
+        margin-left: 8rem !important;
+        margin-right: 4rem;
+        box-sizing: border-box; }
+        .informacion .formulario .form input:focus {
+          border: 1px solid #fcfcfc;
+          border-color: #c50d4a; }
+      .informacion .formulario .form textarea {
+        width: 100%;
+        padding: 1rem;
+        color: #c50d4a;
+        font-weight: 400;
+        outline: 0;
+        margin-left: 4rem;
+        box-sizing: border-box;
+        max-width: 90%;
+        min-width: 80%;
+        min-height: 25rem;
+        max-height: 40rem; }
+        .informacion .formulario .form textarea:focus {
+          border: 1px solid #fcfcfc;
+          border-color: #c50d4a; }
+      .informacion .formulario .form div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly; }
+        .informacion .formulario .form div input {
+          margin-top: 5rem;
+          padding: 0.5rem;
+          border: transparent;
+          background: #c50d4a;
+          color: #fcfcfc;
+          width: 40%;
+          margin-left: 8rem;
+          font-size: 2rem;
+          border-radius: 15rem;
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+          margin: 2rem; }
+
+.titulos {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  margin-top: 15rem; }
+  .titulos h5 {
+    font-size: 2.5rem;
+    color: #c50d4a;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .titulos p {
+    font-size: 2.5rem;
+    color: #c50d4a;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem; }
+
+.comprar {
+  margin-bottom: 5rem; }
+  .comprar .compra h1 {
+    font-size: 3.5rem;
+    color: #c50d4a;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 5rem; }
+  .comprar .lista ul {
+    display: flex;
+    flex-flow: row wrap; }
+    .comprar .lista ul li {
+      list-style-type: none;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      font-weight: 400;
+      color: #3f3f3f; }
+
+.faq {
+  margin-bottom: 5rem; }
+  .faq .f-a-q h1 {
+    font-size: 3.5rem;
+    color: #c50d4a;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 5rem; }
+  .faq .pregyresp h3 {
+    font-size: 2.5rem;
+    color: #c50d4a;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: start; }
+  .faq p {
+    font-size: 2rem;
+    color: #3f3f3f;
+    text-align: justify;
+    margin-bottom: 3rem; }
+
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px)*/
+/*@media (max-width: 575.98 px) {
+  body {
+    font-size: 15%;
+  }
+
+  header .btn-whats {
+    display: block;
+    position: fixed;
+    width: 60px;
+    height: 70px;
+    bottom: 20px;
+    left: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 50px;
+    z-index: 999;
+    line-height: 80px;
+  }
+
+  header .btn-whats i {
+    color: #25d366;
+  }
+
+  header .btn-whats i:hover {
+    transition: all 0.2s;
+    transform: scale(1.5);
+  }
+
+  header nav .logo {
+    width: 25%;
+  }
+} */
+/* /* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
+/* @media (min-width: 576px) and (max-width: 767.98px) {
+} */
+/* Dispositivos medianos (tabletas, 768 px y más) */
+/* @media (min-width: 768px) and (max-width: 991.98px) {
+   header nav .logo {
+  width: 50%;
+}
+} */
+/* Dispositivos grandes (computadoras de escritorio, 992 px y más) */
+/* @media (min-width: 992px) and (max-width: 1199.98px) {
+  header nav .logo {
+  width: 70%;
+}
+}
+ */
+/* Dispositivos extra grandes (escritorios grandes, 1200 px y más) */
+/*@media (min-width: 1200px) {
+}  */
