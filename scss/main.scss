@@ -41,7 +41,7 @@ header {
     }
 
     ul {
-      width: 100%;
+      margin-left: auto;
 
       & li {
         list-style: none;
@@ -57,29 +57,15 @@ header {
             color: $color-pri;
           }
         }
-
-        & .subli {
-          background-color: transparent;
-
-          & .subitem {
-            color: $color-sec;
-            font-size: 1.8rem;
-            background-color: transparent;
-
-            &:hover {
-              color: $color-pri;
-            }
-          }
-        }
       }
     }
 
     & .cart {
       & i {
-        @include icon ();
-        
+        @include icon();
+
         &:hover {
-          @include iconhover ();
+          @include iconhover();
           color: $color-negro;
         }
       }
@@ -100,16 +86,19 @@ header {
 .imagenes {
   & .carousel-inner {
     & .carousel-item {
-      width: 100%;
-      height: 500px;
+      width: 90%;
+      height: 95vh;
       overflow: hidden;
       cursor: pointer;
 
-      & .img-carousel {
+      & img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
+      }
+
+      & .carousel-caption {
+        width: 15%;
       }
     }
   }
@@ -456,10 +445,20 @@ header {
 }
 
 .titulos {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  margin-top: 15rem;
+  display: table;
+
+  & .row {
+    padding: 90px 60px;
+    margin: 10px auto;
+  }
+
+  & .pagos {
+    display: block;
+  }
+
+  & .datos {
+    display: block;
+  }
 
   & h5 {
     @include h5();
@@ -468,6 +467,22 @@ header {
 
   & p {
     @include h3();
+    padding: 0;
+    margin: 0;
+  }
+
+  & span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    width: 20%;
+    color: $color-negro;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  & img {
+    width: 10%;
   }
 }
 // FIN
@@ -516,26 +531,67 @@ header {
 //
 //
 //
-/* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px)*/
-/*@media (max-width: 575.98 px) {
-  body {
-    font-size: 15%;
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px) */
+@media (max-width: 575.98 px) {
+  header {
+    nav {
+      ul {
+        li {
+          a {
+            background: $color-pri;
+          }
+        }
+      }
+    }
   }
-} */
+
+  .articulos {
+    & .orden h3 {
+      text-align: center;
+    }
+  }
+}
 
 /* /* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
-/* @media (min-width: 576px) and (max-width: 767.98px) {
-} */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header {
+    nav {
+      ul {
+        li {
+          a {
+            background: $color-pri;
+          }
+        }
+      }
+    }
+  }
+
+  .articulos {
+    & .orden h3 {
+      text-align: center;
+    }
+  }
+}
 
 /* Dispositivos medianos (tabletas, 768 px y más) */
-/* @media (min-width: 768px) and (max-width: 991.98px) {
-} */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header {
+    nav {
+      ul {
+        li {
+          a {
+            background: $color-pri;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* Dispositivos grandes (computadoras de escritorio, 992 px y más) */
 /* @media (min-width: 992px) and (max-width: 1199.98px) {
+} */
 
-}
- */
 /* Dispositivos extra grandes (escritorios grandes, 1200 px y más) */
-/*@media (min-width: 1200px) {
-}  */
+/* @media (min-width: 1200px) {
+} */
