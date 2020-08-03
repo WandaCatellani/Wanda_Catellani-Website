@@ -66,6 +66,15 @@ header {
           background-color: transparent; }
           header nav ul li .subli .subitem:hover {
             color: #c50d4a; }
+  header nav .cart i {
+    color: #fcfcfc;
+    font-size: 3.5rem;
+    padding: 0.5rem;
+    transform: rotate(0); }
+    header nav .cart i:hover {
+      transform: rotate(360deg);
+      transition: all 0.3s linear;
+      color: #3f3f3f; }
   header .wave {
     height: 30vh;
     overflow: hidden;

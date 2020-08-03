@@ -73,6 +73,17 @@ header {
         }
       }
     }
+
+    & .cart {
+      & i {
+        @include icon ();
+        
+        &:hover {
+          @include iconhover ();
+          color: $color-negro;
+        }
+      }
+    }
   }
 
   & .wave {
