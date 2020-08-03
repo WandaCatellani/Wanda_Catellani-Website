@@ -8,10 +8,6 @@ body {
   font-size: $tam-2;
 }
 
-#ml {
-  margin-left: auto;
-}
-
 header {
   @include bg();
 
@@ -29,8 +25,19 @@ header {
   }
 
   & nav {
-    & .logo {
-      width: 50%;
+    & .navbar-toggler {
+      background: linear-gradient(
+        to right,
+        hsla(12, 79%, 59%, 0.61),
+        hsla(296, 31%, 45%, 0.603)
+      );
+      border-radius: 5rem;
+      width: 5rem;
+      border-color: $color-sec;
+
+      &:focus {
+        border-color: $color-pri;
+      }
     }
 
     ul {
@@ -80,14 +87,20 @@ header {
 }
 
 .imagenes {
-  & h3 {
-    @include h3();
-  }
+  & .carousel-inner {
+    & .carousel-item {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      cursor: pointer;
 
-  & p {
-    @include p();
-    color: $color-sec;
-    text-align: center;
+      & .img-carousel {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
   }
 }
 
@@ -99,8 +112,32 @@ header {
       @include h2();
     }
 
-    & h3 {
-      @include h3();
+    & .imag {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover .hover-img {
+        transform: scale(1);
+      }
+
+      & h3 {
+        @include h3();
+      }
+
+      & .hover-img {
+        @include hover-img();
+
+        & img {
+          width: 20%;
+        }
+
+        & p {
+          color: $color-sec;
+          font-size: $tam-3;
+          padding-top: 1rem;
+        }
+      }
     }
   }
 
@@ -243,6 +280,10 @@ header {
 
     & .boton {
       @include boton();
+
+      /* &:focus {
+        border-color: $color-sec;
+      } */
     }
   }
 
@@ -254,7 +295,7 @@ header {
     margin-top: 10rem;
 
     & h2 {
-      @include h2();
+      @include h2destacado1();
     }
   }
 
@@ -438,7 +479,7 @@ header {
         text-transform: uppercase;
         padding: 0.5rem;
         font-weight: 400;
-        color: $color-negro;        
+        color: $color-negro;
       }
     }
   }
@@ -461,43 +502,13 @@ header {
   }
 }
 
-
-
 //
 //
 //
-
 /* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px)*/
 /*@media (max-width: 575.98 px) {
   body {
     font-size: 15%;
-  }
-
-  header .btn-whats {
-    display: block;
-    position: fixed;
-    width: 60px;
-    height: 70px;
-    bottom: 20px;
-    left: 10px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 50px;
-    z-index: 999;
-    line-height: 80px;
-  }
-
-  header .btn-whats i {
-    color: #25d366;
-  }
-
-  header .btn-whats i:hover {
-    transition: all 0.2s;
-    transform: scale(1.5);
-  }
-
-  header nav .logo {
-    width: 25%;
   }
 } */
 
@@ -507,16 +518,11 @@ header {
 
 /* Dispositivos medianos (tabletas, 768 px y más) */
 /* @media (min-width: 768px) and (max-width: 991.98px) {
-   header nav .logo {
-  width: 50%;
-}
 } */
 
 /* Dispositivos grandes (computadoras de escritorio, 992 px y más) */
 /* @media (min-width: 992px) and (max-width: 1199.98px) {
-  header nav .logo {
-  width: 70%;
-}
+
 }
  */
 /* Dispositivos extra grandes (escritorios grandes, 1200 px y más) */

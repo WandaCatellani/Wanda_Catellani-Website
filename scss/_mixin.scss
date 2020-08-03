@@ -5,17 +5,16 @@
       to right,
       hsla(12, 79%, 59%, 0.61),
       hsla(296, 31%, 45%, 0.603)
-    ),
-    url(/multimedia/portada.jpg);
+    );
   background: linear-gradient(
       to right,
       hsla(12, 79%, 59%, 0.61),
       hsla(296, 31%, 45%, 0.603)
-    ),
-    url(/multimedia/portada.jpg);
-  height: 100vh;
+    );
+  height: 50vh;
   background-size: 100% 100%;
   background-attachment: fixed;
+  position: relative;
 }
 
 @mixin btn-whats {
@@ -32,6 +31,19 @@
   line-height: 80px;
 }
 
+@mixin hover-img {
+  position: absolute;
+  width: 92%;
+  height: 77%;
+  top: 0;
+  transform: scale(0);
+  background: $color-hover;
+  transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 @mixin h1 {
   font-size: $tam-5;
@@ -57,12 +69,13 @@
 }
 
 @mixin h2 {
-  font-size: $tam-4;
+  font-size: $tam-5;
   color: $color-pri;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   padding: 1rem;
-  margin: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 @mixin h2destacado {
@@ -73,6 +86,17 @@
   padding: 1rem;
   margin: 1rem;
   text-transform: uppercase;
+}
+
+@mixin h2destacado1 {
+  font-size: $tam-5;
+  color: $color-pri;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  font-style: italic;
 }
 
 @mixin h3 {
