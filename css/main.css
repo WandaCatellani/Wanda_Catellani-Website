@@ -159,23 +159,18 @@ header {
   background-size: 100% 100%;
   width: 100%;
   margin-top: 8rem; }
-  .footer .copy {
-    margin-bottom: 6rem;
-    margin-top: 2rem; }
-    .footer .copy h6 {
-      font-size: 1.5rem;
-      color: #fcfcfc;
+  .footer .info-footer {
+    margin-top: 4rem; }
+    .footer .info-footer h5 {
+      font-size: 2.5rem;
+      color: #c50d4a;
+      margin-bottom: 0.5rem;
       text-align: center; }
-  .footer h5 {
-    font-size: 2.5rem;
-    color: #c50d4a;
-    margin-bottom: 0.5rem;
-    text-align: center; }
-  .footer h6 {
-    font-size: 2rem;
-    color: #fcfcfc;
-    text-align: center;
-    margin-bottom: 2.5rem; }
+    .footer .info-footer h6 {
+      font-size: 2rem;
+      color: #fcfcfc;
+      text-align: center;
+      margin-bottom: 2.5rem; }
   .footer .iconos {
     display: flex;
     justify-content: center;
@@ -210,6 +205,13 @@ header {
       transform: rotate(360deg);
       transition: all 0.3s linear;
       color: #f84279de; }
+  .footer .copy {
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+    .footer .copy h6 {
+      font-size: 1.5rem;
+      color: #fcfcfc;
+      text-align: center; }
 
 .articulos {
   margin-bottom: 5rem; }

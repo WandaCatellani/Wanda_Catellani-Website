@@ -157,21 +157,16 @@ header {
 .footer {
   @include footer();
 
-  & .copy {
-    margin-bottom: 6rem;
-    margin-top: 2rem;
+  & .info-footer {
+    margin-top: 4rem;
+
+    & h5 {
+      @include h5();
+    }
 
     & h6 {
-      @include h6copy();
+      @include h6();
     }
-  }
-
-  & h5 {
-    @include h5();
-  }
-
-  & h6 {
-    @include h6();
   }
 
   & .iconos {
@@ -202,6 +197,15 @@ header {
     &:hover {
       @include redeshover();
       color: $color-instagram;
+    }
+  }
+
+  & .copy {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    & h6 {
+      @include h6copy();
     }
   }
 }
