@@ -46,7 +46,7 @@
 }
 
 @mixin h1 {
-  font-size: $tam-5;
+  font-size: $tam-4;
   color: $color-pri;
   font-weight: 600;
   text-align: center;
@@ -55,9 +55,9 @@
   margin-bottom: 5rem;
 }
 
-@mixin h1destacado {
+@mixin destacado {
   color: $color-pri;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   padding: 1rem;
   padding-top: 10rem;
@@ -69,7 +69,7 @@
 }
 
 @mixin h2 {
-  font-size: $tam-5;
+  font-size: $tam-2;
   color: $color-pri;
   font-weight: 600;
   text-align: center;
@@ -79,9 +79,9 @@
 }
 
 @mixin h2destacado {
-  font-size: $tam-4;
+  font-size: $tam-3;
   color: $color-pri;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   padding: 1rem;
   margin: 1rem;
@@ -180,7 +180,7 @@
 }
 
 @mixin infor {
-  color: $color-pri;
+  color: $color-negro;
   font-size: $tam-2;
   margin: 1rem;
   padding: 1rem;
