@@ -1,48 +1,146 @@
-@mixin bg {
+@mixin header {
   width: 100%;
-  background: $bgcolor;
-  background: -webkit-linear-gradient(
-      to right,
-      hsla(12, 79%, 59%, 0.61),
-      hsla(296, 31%, 45%, 0.603)
-    );
-  background: linear-gradient(
-      to right,
-      hsla(12, 79%, 59%, 0.61),
-      hsla(296, 31%, 45%, 0.603)
-    );
-  height: 50vh;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  position: relative;
-}
-
-@mixin btn-whats {
-  display: block;
   position: fixed;
-  width: 60px;
-  height: 70px;
-  bottom: 20px;
-  left: 10px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 50px;
-  z-index: 999;
-  line-height: 80px;
+  z-index: 3;
+  display: inline-block;
+  background: $color-sec;
 }
 
-@mixin hover-img {
+@mixin top {
+  background-color: $color-negro;
+  height: 40px;
+  position: relative;
+  z-index: 4;
+}
+
+@mixin top-a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: $tam-2;
+  line-height: 40px;
+}
+
+@mixin top-span {
+  display: inline-block;
+  font-size: $tam-1;
+  margin-left: 1rem;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+@mixin txt-right {
+  font-size: $tam-1;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+}
+
+@mixin btn-carro {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  width: 50px;
+  height: 40px;
+  text-align: left;
+  margin-left: 3.5rem;
+  display: block;
+  float: right;
+  padding: 0.5rem 1rem;
+  background-color: $color-blanco;
+}
+
+@mixin nav {
+  height: 40px;
+  z-index: 4;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@mixin nav-icon {
+  position: relative;
+  float: left;
+  margin: 0;
+}
+
+@mixin carousel-indic {
+  background-color: $color-blanco;
+  line-height: 30px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+}
+
+@mixin carousel-indic-li {
+  background-color: $color-instagram;
+  width: 10px;
+  height: 10px;
+  margin: 1rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+@mixin txt {
   position: absolute;
-  width: 92%;
-  height: 77%;
-  top: 0;
-  transform: scale(0);
-  background: $color-hover;
-  transition: transform 0.5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  height: 140px;
+  top: 275px;
+  left: 0;
+  width: 100%;
+  background: #ffffff6b;
+}
+
+@mixin texto {
+  background-color: #fff;
+  position: relative;
+  float: right;
+  width: 310px;
+  height: 140px;
+  padding: 40px 45px;
+}
+
+@mixin texto-h1 {
+  font-weight: 700;
+  font-size: $tam-2;
+  color: #000;
+  margin-top: 0;
+}
+
+@mixin texto-p {
+  font-weight: 300;
+  font-size: $tam-1;
+  color: #000;
+  margin: 0;
+  line-height: 1.1;
+}
+
+@mixin texto-a {
+  text-decoration: none;
+  color: #000;
+  background-color: $color-pri;
+  font-weight: 700;
+  width: 140px;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  bottom: -40px;
+  display: inline-block;
+  line-height: 30px;
+}
+
+@mixin title-destac {
+  font-size: $tam-6;
+  color: #000;
+  font-weight: 100;
+  text-align: center;
+  padding: 1rem;
+  margin: 3rem auto;
 }
 
 @mixin h1 {
@@ -55,57 +153,63 @@
   margin-bottom: 5rem;
 }
 
-@mixin destacado {
-  color: $color-pri;
+@mixin destac-h3 {
+  font-size: $tam-1;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+
+@mixin destac-p {
   font-weight: 400;
   text-align: center;
-  padding: 1rem;
-  padding-top: 10rem;
-  font-size: $tam-5;
-  margin: 1rem;
-  margin-bottom: 1rem;
-  font-style: italic;
-  text-transform: uppercase;
+  font-size: $tam-1;
+  color: #000;
+  margin: 0;
 }
 
-@mixin h2 {
-  font-size: $tam-2;
-  color: $color-pri;
-  font-weight: 600;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+@mixin footer {
+  background: $color-negro;
+  height: auto;
+  min-height: 280px;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  margin-top: 1rem;
+  overflow: hidden;
 }
 
-@mixin h2destacado {
+@mixin iconos {
+  display: flex;
+  justify-content: center;
   font-size: $tam-3;
-  color: $color-pri;
-  font-weight: 400;
   text-align: center;
-  padding: 1rem;
-  margin: 1rem;
-  text-transform: uppercase;
+  margin: 2rem 0;
 }
 
-@mixin h2destacado1 {
-  font-size: $tam-5;
-  color: $color-pri;
-  font-weight: 400;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-  margin-bottom: 5rem;
-  font-style: italic;
+@mixin infor {
+  color: #fff;
+  font-size: $tam-1;
+  margin: 1rem;
 }
 
-@mixin h3 {
-  font-size: $tam-3;
-  color: $color-pri;
-  font-weight: 400;
-  text-align: center;
+@mixin redes {
+  color: #fff;
   padding: 1rem;
   margin: 1rem;
+  transform: rotate(0);
+}
+
+@mixin redeshover {
+  transform: rotate(360deg);
+  transition: all 0.3s linear;
+}
+
+@mixin title-copy {
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
 }
 
 @mixin h3orden {
@@ -116,46 +220,13 @@
   font-weight: 400;
 }
 
-@mixin h6copy {
-  font-size: $tam-1;
-  color: $color-sec;
-  text-align: center;
-}
-
-@mixin h6 {
-  font-size: $tam-2;
-  color: $color-sec;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-@mixin h5 {
-  font-size: $tam-3;
-  color: $color-pri;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-/* @mixin img-carousel {
-  height: 550px;
-  object-fit: cover;
-} */
-
-@mixin footer {
-  background: #e96443;
-  background: -webkit-linear-gradient(
-    to right,
-    hsla(12, 79%, 59%, 0.61),
-    hsla(296, 31%, 45%, 0.603)
-  );
-  background: linear-gradient(
-    to right,
-    hsla(12, 79%, 59%, 0.61),
-    hsla(296, 31%, 45%, 0.603)
-  );
-  background-size: 100% 100%;
+@mixin hover-galeria {
+  position: absolute;
   width: 100%;
-  margin-top: 8rem;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  transition: transform 0.5s;
 }
 
 @mixin icon {
@@ -166,35 +237,6 @@
 }
 
 @mixin iconhover {
-  transform: rotate(360deg);
-  transition: all 0.3s linear;
-}
-
-@mixin iconos {
-  display: flex;
-  justify-content: center;
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
-@mixin infor {
-  color: $color-negro;
-  font-size: $tam-2;
-  margin: 1rem;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-@mixin redes {
-  color: $color-sec;
-  padding: 1rem;
-  margin: 1rem;
-  transform: rotate(0);
-}
-
-@mixin redeshover {
   transform: rotate(360deg);
   transition: all 0.3s linear;
 }
@@ -237,8 +279,41 @@
 }
 
 @mixin p {
-  font-size: $tam-2;
-  color: $color-negro;
+  font-size: $tam-1;
+  font-weight: 400;
+  color: #000;
   text-align: justify;
-  margin-bottom: $tam-4;
+}
+
+@mixin h6 {
+  font-size: $tam-2;
+  color: $color-sec;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+@mixin h4 {
+  font-size: $tam-1;
+  color: #fff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@mixin h5 {
+  font-size: $tam-3;
+  color: $color-sec;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+@mixin destacado {
+  color: $color-pri;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 10rem;
+  font-size: $tam-5;
+  margin: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
 }

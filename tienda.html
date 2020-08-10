@@ -14,214 +14,233 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="multimedia/logowcb.png">
-
+  <link rel="icon" type="image/png" href="multimedia/logowcb.png">
 </head>
 
 <body>
+  <header class="sticky-top">
 
-  <header>
-    <div class="btn-whats">
-      <a href="https://api.whatsapp.com/send?phone=542804021588&text=Hola!%20Gracias%20por%20comunicarte%20con%20nosotros."
-        target="_blank">
-        <i class="fab fa-whatsapp"></i></a>
-    </div>
-
-    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid top-negro">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="multimedia/logo.png" width="200" alt="logo"></a>
+        <div class="row">
 
-        <button alrt="menu" class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <div class="col-5 tel">
+            <a href="https://api.whatsapp.com/send?phone=542804021588&text=Hola!%20Gracias%20por%20comunicarte%20con%20nosotros.%20Podes%20chequear%20nuestro%20catálogo%20con%20información%20completa%20sobre%20las%20tortas,%20tartas,%20combos%20y%20más.%20Por%20envíos%20y%20otras%20consultas%20podes%20preguntarnos%20y%20te%20responderemos%20a%20la%20brevedad.%20Gracias %20😙"
+              target="_blank"> <i class="fab fa-whatsapp whats"></i>
+              280 4021588 <span>HACE TU PEDIDO</span></a>
+          </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav animate__animated animate__fadeInTopRight delay-2s">
-
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="tienda.html">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="comocomprar.html">Como&nbsp;Comprar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
-            </li>
-          </ul>
-        </div>
-        <div class="cart">
-          <a class="nav-link" href="#">
-              <i class="fas fa-shopping-cart"></i></a>
+          <div class="col-7 text-right">
+            <a href="contacto.html" class="btn-contacto"> CONTACTO </a>
+            <a class="btn-carro">
+              <img src="multimedia/carro.svg" class="img-fluid" alt="">
+              <h3 id="cant">0</h3>
+            </a>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <div class="wave">
-      <a href="#"></a>
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
-      </svg>
+    <div class="container-fluid logo">
+      <div class="container">
+        <a href="index.html">
+          <img src="multimedia/logonegro.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="container-fluid menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-md">
+
+          <button alrt="menu" class="col-xs-3 col-sm-2 navbar-toggler btn-nav" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav menu-desplegable">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+                <span> · </span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tienda.html">TIENDA</a>
+                <span> · </span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">CONTACTO</a>
+                <span> · </span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comocomprar.html">COMO&nbsp;COMPRAR</a>
+                <span> · </span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="container articulos">
-    
-        <h1 class="animate__animated animate__pulse delay-3s">TIENDA</h1>
-
-    <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-6 orden">
-        <h3>Ordenar por:</h3>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-6 select">
-        <select>Selecciona una opción
-          <option>Destacados</option>
-          <option>Precio: Menor a Mayor</option>
-          <option>Precio: Mayor a Menor</option>
-          <option>Más Nuevo al más Viejo</option>
-          <option>Más Viejo al más Nuevo</option>
-          <option>Más Vendidos</option>
-        </select>
+  <main>
+    <div class="container-fluid img-tienda">
+      <div class="container img-top">
+        <img src="multimedia/torta1.jpg" alt="">
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-3 col-lg-3 categoria">
-        <h3>CATEGORIA</h3>
-        <div>
-          <p><input type="radio" name="CATEGORIA"></p>
-          <h4>Tortas y Brownies</h4>
-        </div>
-        <div>
-          <p><input type="radio" name="CATEGORIA"></p>
-          <h4>Tartas</h4>
-        </div>
-        <div>
-          <p><input type="radio" name="CATEGORIA"></p>
-          <h4>Delicias</h4>
-        </div>
-        <div>
-          <p><input type="radio" name="CATEGORIA"></p>
-          <h4>Postres</h4>
-        </div>
-        <div>
-          <p><input type="radio" name="CATEGORIA"></p>
-          <h4>Personalizados</h4>
-        </div>
-        <div>
-          <p><input type="radio" name="CATEGORIA"></p>
-          <h4>Panificados</h4>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-3 col-lg-3 foto">
-        <img class="img-fluid" src="multimedia/6.jpg" alt="">
-      </div>
-
-      <div class="col-sm-12 col-md-3 col-lg-3 foto">
-        <img class="img-fluid" src="multimedia/7.jpg" alt="">
-      </div>
-
-      <div class="col-sm-12 col-md-3 col-lg-3 foto">
-        <img class="img-fluid" src="multimedia/8.jpg" alt="">
-      </div>
+    <div class="container-fluid secciones">
+      <ul class="container">
+        <li>
+          <a href="#">TORTAS</a></li>
+        <li>
+          <a href="#">POSTRES</a></li>
+        <li>
+          <a href="#">TARTAS</a></li>
+        <li>
+          <a href="#">EXQUISITECES</a></li>
+        <li>
+          <a href="#">INDIVIDUALES</a></li>
+      </ul>
     </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-3 col-lg-3 tamano">
-        <h3>TAMAÑO</h3>
-        <div>
-          <p><input type="checkbox" name="TAMAÑO"></p>
-          <h4>Grande (28 cm)</h4>
+    <section class="container-fluid tienda">
+      <div class="container articulos">
+        <div class="row">
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/pavlova1.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/alfajores.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/choco.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <p><input type="checkbox" name="TAMAÑO"></p>
-          <h4>Mediana (24 cm)</h4>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/macarrons.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/cheesecakemini2.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/donas.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <p><input type="checkbox" name="TAMAÑO"></p>
-          <h4>Pequeña (18 cm)</h4>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/cheesecake1.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/brownie3.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 foto">
+            <img src="multimedia/maicenitas.jpg" alt="">
+            <div class="hover-foto">
+              <img src="multimedia/flecha.png" alt="flecha">
+              <p>¡Probá!</p>
+            </div>
+          </div>
         </div>
-
-        <input class="boton" type="button" type="submit" value="Enviar"></input>
       </div>
-
-      <div class="col-sm-12 col-md-3 col-lg-3 foto">
-        <img class="img-fluid" src="multimedia/9.jpg" alt="">
-      </div>
-
-      <div class="col-sm-12 col-md-3 col-lg-3 foto">
-        <img class="img-fluid" src="multimedia/10.jpg" alt="">
-      </div>
-
-      <div class="col-sm-12 col-md-3 col-lg-3 foto">
-        <img class="img-fluid" src="multimedia/11.jpg" alt="">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 frase">
-        <h2>SATISFACEMOS TU DESEO</h2>
-      </div>
-
-      <div class="col-12 img">
-        <img class="img-fluid" src="multimedia/13.jpg" alt="">
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="container-fluid footer">
-    <div class="row">
-      <div class="col-md-6 info-footer">
-        <h5>TELEFONO</h5>
-        <h6>(+54) 280 - 4021588</h6>
-        <h5>MAIL</h5>
-        <h6>cwand07@gmail.com</h6>
-        <h5>UBICACION</h5>
-        <h6>Monseñor Pablo Cabrera 2393</h6>
-      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
 
-      <div class="col-md-6 info-footer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.146553835533!2d-64.20988228530747!3d-31.382522301754026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298e52ed5a13d%3A0xeaa1513b0111b12d!2sAv.%20Monse%C3%B1or%20Pablo%20Cabrera%202393%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1592258866513!5m2!1ses-419!2sar"
-          width="350" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-          tabindex="0">
-        </iframe>
-      </div>
-    </div>
+          <div class="informacion">
+            <div class="infor">
+              <a href="https://api.whatsapp.com/send?phone=542804021588&text=Hola!%20Gracias%20por%20comunicarte%20con%20nosotros.%20Podes%20chequear%20nuestro%20catálogo%20con%20información%20completa%20sobre%20las%20tortas,%20tartas,%20combos%20y%20más.%20Por%20envíos%20y%20otras%20consultas%20podes%20preguntarnos%20y%20te%20responderemos%20a%20la%20brevedad.%20Gracias %20😙"
+                target="_blank">
+                <i class="fab fa-whatsapp whats"></i></a>
+              <p class="infor">280 4021588</p>
+            </div>
 
-    <div class="row">
-      <div class="iconos col-md-12">
-        <a href=" https://www.facebook.com/wcatellani/">
-          <i class="fab fa-facebook-f f"></i></a>
-        <a href="https://twitter.com/cwand7">
-          <i class="fab fa-twitter t"></i></a>
-        <a href="https://www.instagram.com/cwand7/">
-          <i class="fab fa-instagram i"></i></a>
-      </div>
-    </div>
+            <div class="infor">
+              <i class="far fa-envelope mail"></i>
+              <p class="infor">cwand07@gmail.com</p>
+            </div>
 
-    <div class="row">
-      <div class="col-md-12 copy">
-        <h6>&copy; 2020 WANDA CATELLANI ® | Todos los derechos reservados</h6>
-      </div>
-    </div>
+            <div class="infor">
+              <i class="fas fa-map-marker-alt dir"></i>
+              <p class="infor">Mons. Pablo Cabrera 2393</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 iconos">
+              <a href=" https://www.facebook.com/wcatellani/">
+                <i class="fab fa-facebook-f f"></i></a>
+              <a href="https://twitter.com/cwand7">
+                <i class="fab fa-twitter t"></i></a>
+              <a href="https://www.instagram.com/cwand7/">
+                <i class="fab fa-instagram i"></i></a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 copy">
+              <h6>&copy; 2020 WANDA CATELLANI ® | Todos los derechos reservados</h6>
+            </div>
+          </div>
+        </div>
   </footer>
 
   <script src="https://kit.fontawesome.com/f99fd89f2a.js" crossorigin="anonymous"></script>
