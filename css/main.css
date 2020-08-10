@@ -165,8 +165,7 @@ main {
         border: none;
         border-radius: 1rem; }
   main .home {
-    padding: 0;
-    height: 85vh; }
+    padding: 0; }
     main .home .row {
       margin: 0; }
     main .home .left {
@@ -174,7 +173,7 @@ main {
       main .home .left .centrar-img {
         position: relative;
         overflow: hidden;
-        height: 100vh; }
+        height: 85vh; }
         main .home .left .centrar-img img {
           position: absolute;
           width: 100%; }
@@ -192,7 +191,7 @@ main {
           float: right;
           width: 310px;
           height: 140px;
-          padding: 40px 45px; }
+          padding: 4rem 4.5rem; }
           main .home .left .txt .texto h1 {
             font-weight: 700;
             font-size: 2rem;
@@ -213,7 +212,7 @@ main {
             height: 30px;
             text-align: center;
             position: absolute;
-            bottom: -40px;
+            bottom: -4rem;
             display: inline-block;
             line-height: 30px; }
     main .home .right {
@@ -221,7 +220,7 @@ main {
       main .home .right .centrar-img {
         position: relative;
         overflow: hidden;
-        height: 100vh; }
+        height: 85vh; }
         main .home .right .centrar-img img {
           position: absolute;
           width: 100%; }
@@ -239,7 +238,7 @@ main {
           float: right;
           width: 310px;
           height: 140px;
-          padding: 40px 45px;
+          padding: 4rem 4.5rem;
           float: left; }
           main .home .right .txt .texto h1 {
             font-weight: 700;
@@ -261,7 +260,7 @@ main {
             height: 30px;
             text-align: center;
             position: absolute;
-            bottom: -40px;
+            bottom: -4rem;
             display: inline-block;
             line-height: 30px;
             background-color: #e2e9f1; }
@@ -274,7 +273,7 @@ main {
     font-weight: 100;
     text-align: center;
     padding: 1rem;
-    margin: 2rem auto; }
+    margin: 3rem auto; }
   .destacados .prod-cont {
     display: flex;
     justify-content: space-evenly;
@@ -733,6 +732,14 @@ main {
     padding: 0px 15px; }
   .menu .menu-desplegable .btn-nav {
     position: relative;
+    margin: 0; }
+  main .destacados h2 {
+    font-size: 4rem;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+    padding: 1rem;
+    margin: 3rem auto;
     margin: 0; } }
 
 /* /* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
@@ -776,7 +783,15 @@ main {
     line-height: 42px;
     font-size: 16px;
     color: #fff;
-    padding: 0px 20px; } }
+    padding: 0px 20px; }
+  main .destacados h2 {
+    font-size: 4rem;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+    padding: 1rem;
+    margin: 3rem auto;
+    margin: 0; } }
 
 /*  Dispositivos medianos (tabletas, 768 px y más) */
 @media screen and (max-width: 991px) {
