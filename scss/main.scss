@@ -105,11 +105,7 @@ header {
     @include nav();
 
     .btn-nav {
-      @include nav-icon();
-
-      i{
-        font-size: 2rem;
-      }
+      @include btn-nav();
 
       &:focus {
         border-color: $color-pri;
@@ -305,6 +301,11 @@ main {
     .infor {
       @include iconos();
       flex-direction: column;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
 
       .whats {
         color: $color-whats;
@@ -727,6 +728,80 @@ main {
 //
 //
 //          MEDIA QUERY
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 410px) */
+@media screen and (max-width: 410px) {
+  header {
+    .top-negro .tel {
+      padding-right: 0;
+
+      .text-right {
+        padding: 0 !important;
+
+        .btn-carro {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      }
+      a span {
+        display: none !important;
+      }
+    }
+
+    .btn-carro {
+      margin-right: 0.7rem;
+    }
+
+    .logo .container {
+      height: 100px !important;
+
+      img {
+        height: 70px;
+      }
+    }
+    .menu {
+      padding: 0;
+
+      .container {
+        padding: 0;
+
+        .navbar {
+          padding: 0;
+
+          .btn-nav {
+            padding: 0 1.5rem;
+          }
+
+          .menu-desplegable {
+            .li {
+              margin-top: 0.5rem;
+              background-color: $color-negro !important;
+            }
+
+            li {
+              display: block;
+              border-bottom: 1px solid $color-pri;
+              background-color: $color-negro;
+
+              a {
+                line-height: 36px;
+                font-size: $tam-1;
+                padding: 0;
+                color: #fff;
+                text-align: center;
+                margin: 0;
+              }
+
+              span {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px) */
 @media screen and (max-width: 576px) {
   header {
@@ -749,36 +824,83 @@ main {
         height: 70px;
       }
     }
+    .menu {
+      padding: 0;
 
-    .menu .menu-desplegable li {
-      display: block;
-      border-bottom: 1px solid $color-pri;
-      background-color: $color-negro;
-
-      a {
-        line-height: 36px;
-        font-size: $tam-1;
+      .container {
         padding: 0;
-        color: #fff;
-        text-align: center;
-        margin: 0;
-      }
 
-      span {
-        margin: 0;
+        .navbar {
+          padding: 0;
+
+          .btn-nav {
+            padding: 0 1.5rem;
+          }
+
+          .menu-desplegable {
+            .li {
+              margin-top: 0.5rem;
+              background-color: $color-negro !important;
+            }
+
+            li {
+              display: block;
+              border-bottom: 1px solid $color-pri;
+              background-color: $color-negro;
+
+              a {
+                line-height: 36px;
+                font-size: $tam-1;
+                padding: 0;
+                color: #fff;
+                text-align: center;
+                margin: 0;
+              }
+
+              span {
+                margin: 0;
+              }
+            }
+          }
+        }
       }
     }
   }
 
   main {
     .home {
-      .texto {
-        padding-bottom: 0 !important;
+      .txt {
+        padding: 0;
+        width: 100%;
+        top: 0;
+        position: relative;
+
+        .texto {
+          padding: 2rem !important;
+
+          h1 {
+            font-size: 1.4rem !important;
+          }
+
+          p {
+            font-size: 1.2rem !important;
+            width: 60%;
+          }
+
+          a {
+            font-size: 1.4rem;
+            width: 100px !important;
+            right: 2rem;
+          }
+        }
       }
     }
+
     .destacados {
       h2 {
-        font-size: $tam-2;
+        font-size: 1.8rem !important;
+        margin: 2.5rem auto;
+        padding: 0;
       }
       .product {
         h3 {
@@ -797,6 +919,7 @@ main {
     }
   }
 }
+
 /* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
 @media screen and (max-width: 767px) {
   header .logo .container {
@@ -809,24 +932,42 @@ main {
 
   .menu {
     height: 40px;
+    padding: 0;
 
-    .menu-desplegable {
-      li {
-        display: block !important; //funciona 
-        border-bottom: $color-pri !important; //no funciona
-        background-color: $color-negro;
+    .container {
+      padding: 0;
 
-        a {
-          text-align: center;
-          line-height: 42px;
-          font-size: $tam-1;
-          color: #fff !important; //funciona
-          padding: 0 !important; //no funciona
-          margin: 0;
+      .navbar {
+        padding: 0;
+
+        .btn-nav {
+          padding: 0 1.5rem;
         }
 
-        span {
-          margin: 0;
+        .menu-desplegable {
+          .li {
+            margin-top: 0.5rem;
+            background-color: $color-negro !important;
+          }
+
+          li {
+            display: block !important;
+            border-bottom: 1px solid $color-pri;
+            background-color: $color-negro;
+
+            a {
+              text-align: center;
+              line-height: 42px;
+              font-size: $tam-1;
+              color: #fff !important;
+              padding: 0;
+              margin: 0 !important;
+            }
+
+            span {
+              margin: 0 !important;
+            }
+          }
         }
       }
     }
@@ -834,10 +975,17 @@ main {
 
   main {
     .home {
-      .texto {
-        padding-bottom: 0 !important;
+      .txt {
+        height: 100px !important;
+
+        .texto {
+          padding: 2.3rem !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
       }
     }
+
     .destacados {
       h2 {
         font-size: $tam-2;
@@ -853,22 +1001,109 @@ main {
         }
       }
     }
+
+    .secciones ul {
+      height: 65px;
+
+      li {
+        padding: 1.5rem;
+        padding-top: 2.1rem;
+        /* display: block; */
+
+        a {
+          padding: 0 0.5rem;
+          font-size: $tam-2;
+        }
+      }
+    }
   }
 
   footer {
     .informacion {
       flex-direction: column;
     }
+
+    .iconos {
+      .f {
+        color: $color-facebook;
+      }
+
+      .t {
+        color: $color-twitter;
+      }
+
+      .i {
+        color: $color-instagram;
+      }
+    }
   }
 }
+
 /*  Dispositivos medianos (tabletas, 768 px y más) */
 @media screen and (max-width: 991px) {
-main .destacados h2 {
-  font-size: $tam-5;
-  }
-
   .menu .menu-desplegable li span {
     margin: 0 1rem;
   }
-}
 
+  main {
+    .home {
+      .centrar-img {
+        height: 65vh !important;
+      }
+
+      .txt {
+        position: relative !important;
+        top: 0 !important;
+        height: 200px !important;
+        background-color: #fff !important;
+
+        .texto {
+          width: 100% !important;
+          height: 100% !important;
+          padding: 4.5rem 7.5rem !important;
+
+          a {
+            position: absolute !important;
+            bottom: 4.5rem !important;
+            left: 7.5rem !important;
+            right: inherit !important;
+          }
+        }
+      }
+    }
+
+    .destacados h2 {
+      font-size: $tam-5;
+    }
+
+    .secciones ul {
+      height: 65px;
+
+      li {
+        padding: 1.5rem;
+        padding-top: 2.1rem;
+
+        a {
+          padding: 0 0.5rem;
+          font-size: $tam-2;
+        }
+      }
+    }
+  }
+
+  footer {
+    .iconos {
+      .f {
+        color: $color-facebook;
+      }
+
+      .t {
+        color: $color-twitter;
+      }
+
+      .i {
+        color: $color-instagram;
+      }
+    }
+  }
+}

@@ -61,10 +61,12 @@
   width: 100%;
 }
 
-@mixin nav-icon {
+@mixin btn-nav {
   position: relative;
   text-align: left;
   margin: 0;
+  font-size: 3rem;
+  height: 30px;
 }
 
 @mixin carousel-indic {
@@ -180,18 +182,18 @@
   overflow: hidden;
 }
 
+@mixin infor {
+  color: #fff;
+  font-size: $tam-1;
+  margin: 1rem;
+}
+
 @mixin iconos {
   display: flex;
   justify-content: center;
   font-size: $tam-3;
   text-align: center;
   margin: 2rem 0;
-}
-
-@mixin infor {
-  color: #fff;
-  font-size: $tam-1;
-  margin: 1rem;
 }
 
 @mixin redes {

@@ -105,9 +105,9 @@ header {
     header .navbar .btn-nav {
       position: relative;
       text-align: left;
-      margin: 0; }
-      header .navbar .btn-nav i {
-        font-size: 2rem; }
+      margin: 0;
+      font-size: 3rem;
+      height: 30px; }
       header .navbar .btn-nav:focus {
         border-color: #FFD1E0; }
     header .navbar .menu-desplegable {
@@ -315,6 +315,9 @@ main .home {
       text-align: center;
       margin: 2rem 0;
       flex-direction: column; }
+      .footer .informacion .infor a {
+        text-decoration: none;
+        color: #fff; }
       .footer .informacion .infor .whats {
         color: #25d366;
         padding: 1rem;
@@ -700,6 +703,48 @@ main .home {
     color: #000;
     text-align: justify; }
 
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 410px) */
+@media screen and (max-width: 410px) {
+  header .top-negro .tel {
+    padding-right: 0; }
+    header .top-negro .tel .text-right {
+      padding: 0 !important; }
+      header .top-negro .tel .text-right .btn-carro {
+        margin: 0 !important;
+        padding: 0 !important; }
+    header .top-negro .tel a span {
+      display: none !important; }
+  header .btn-carro {
+    margin-right: 0.7rem; }
+  header .logo .container {
+    height: 100px !important; }
+    header .logo .container img {
+      height: 70px; }
+  header .menu {
+    padding: 0; }
+    header .menu .container {
+      padding: 0; }
+      header .menu .container .navbar {
+        padding: 0; }
+        header .menu .container .navbar .btn-nav {
+          padding: 0 1.5rem; }
+        header .menu .container .navbar .menu-desplegable .li {
+          margin-top: 0.5rem;
+          background-color: #3f3f3f !important; }
+        header .menu .container .navbar .menu-desplegable li {
+          display: block;
+          border-bottom: 1px solid #FFD1E0;
+          background-color: #3f3f3f; }
+          header .menu .container .navbar .menu-desplegable li a {
+            line-height: 36px;
+            font-size: 1.5rem;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            margin: 0; }
+          header .menu .container .navbar .menu-desplegable li span {
+            margin: 0; } }
+
 /* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px) */
 @media screen and (max-width: 576px) {
   header .top-negro .tel {
@@ -712,23 +757,50 @@ main .home {
     height: 100px !important; }
     header .logo .container img {
       height: 70px; }
-  header .menu .menu-desplegable li {
-    display: block;
-    border-bottom: 1px solid #FFD1E0;
-    background-color: #3f3f3f; }
-    header .menu .menu-desplegable li a {
-      line-height: 36px;
-      font-size: 1.5rem;
-      padding: 0;
-      color: #fff;
-      text-align: center;
-      margin: 0; }
-    header .menu .menu-desplegable li span {
-      margin: 0; }
-  main .home .texto {
-    padding-bottom: 0 !important; }
+  header .menu {
+    padding: 0; }
+    header .menu .container {
+      padding: 0; }
+      header .menu .container .navbar {
+        padding: 0; }
+        header .menu .container .navbar .btn-nav {
+          padding: 0 1.5rem; }
+        header .menu .container .navbar .menu-desplegable .li {
+          margin-top: 0.5rem;
+          background-color: #3f3f3f !important; }
+        header .menu .container .navbar .menu-desplegable li {
+          display: block;
+          border-bottom: 1px solid #FFD1E0;
+          background-color: #3f3f3f; }
+          header .menu .container .navbar .menu-desplegable li a {
+            line-height: 36px;
+            font-size: 1.5rem;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            margin: 0; }
+          header .menu .container .navbar .menu-desplegable li span {
+            margin: 0; }
+  main .home .txt {
+    padding: 0;
+    width: 100%;
+    top: 0;
+    position: relative; }
+    main .home .txt .texto {
+      padding: 2rem !important; }
+      main .home .txt .texto h1 {
+        font-size: 1.4rem !important; }
+      main .home .txt .texto p {
+        font-size: 1.2rem !important;
+        width: 60%; }
+      main .home .txt .texto a {
+        font-size: 1.4rem;
+        width: 100px !important;
+        right: 2rem; }
   main .destacados h2 {
-    font-size: 2rem; }
+    font-size: 1.8rem !important;
+    margin: 2.5rem auto;
+    padding: 0; }
   main .destacados .product h3 {
     margin: 3rem 0 0 0 !important; }
   main .destacados .product p {
@@ -743,22 +815,36 @@ main .home {
     header .logo .container img {
       height: 80px; }
   .menu {
-    height: 40px; }
-    .menu .menu-desplegable li {
-      display: block !important;
-      border-bottom: #FFD1E0 !important;
-      background-color: #3f3f3f; }
-      .menu .menu-desplegable li a {
-        text-align: center;
-        line-height: 42px;
-        font-size: 1.5rem;
-        color: #fff !important;
-        padding: 0 !important;
-        margin: 0; }
-      .menu .menu-desplegable li span {
-        margin: 0; }
-  main .home .texto {
-    padding-bottom: 0 !important; }
+    height: 40px;
+    padding: 0; }
+    .menu .container {
+      padding: 0; }
+      .menu .container .navbar {
+        padding: 0; }
+        .menu .container .navbar .btn-nav {
+          padding: 0 1.5rem; }
+        .menu .container .navbar .menu-desplegable .li {
+          margin-top: 0.5rem;
+          background-color: #3f3f3f !important; }
+        .menu .container .navbar .menu-desplegable li {
+          display: block !important;
+          border-bottom: 1px solid #FFD1E0;
+          background-color: #3f3f3f; }
+          .menu .container .navbar .menu-desplegable li a {
+            text-align: center;
+            line-height: 42px;
+            font-size: 1.5rem;
+            color: #fff !important;
+            padding: 0;
+            margin: 0 !important; }
+          .menu .container .navbar .menu-desplegable li span {
+            margin: 0 !important; }
+  main .home .txt {
+    height: 100px !important; }
+    main .home .txt .texto {
+      padding: 2.3rem !important;
+      width: 100% !important;
+      height: 100% !important; }
   main .destacados h2 {
     font-size: 2rem; }
   main .destacados .product {
@@ -767,12 +853,57 @@ main .home {
       margin: 3rem 0 0 0 !important; }
     main .destacados .product p {
       margin-bottom: 4rem !important; }
+  main .secciones ul {
+    height: 65px; }
+    main .secciones ul li {
+      padding: 1.5rem;
+      padding-top: 2.1rem;
+      /* display: block; */ }
+      main .secciones ul li a {
+        padding: 0 0.5rem;
+        font-size: 2rem; }
   footer .informacion {
-    flex-direction: column; } }
+    flex-direction: column; }
+  footer .iconos .f {
+    color: #1778f2; }
+  footer .iconos .t {
+    color: #1da1f2; }
+  footer .iconos .i {
+    color: #f84279de; } }
 
 /*  Dispositivos medianos (tabletas, 768 px y más) */
 @media screen and (max-width: 991px) {
+  .menu .menu-desplegable li span {
+    margin: 0 1rem; }
+  main .home .centrar-img {
+    height: 65vh !important; }
+  main .home .txt {
+    position: relative !important;
+    top: 0 !important;
+    height: 200px !important;
+    background-color: #fff !important; }
+    main .home .txt .texto {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 4.5rem 7.5rem !important; }
+      main .home .txt .texto a {
+        position: absolute !important;
+        bottom: 4.5rem !important;
+        left: 7.5rem !important;
+        right: inherit !important; }
   main .destacados h2 {
     font-size: 3.5rem; }
-  .menu .menu-desplegable li span {
-    margin: 0 1rem; } }
+  main .secciones ul {
+    height: 65px; }
+    main .secciones ul li {
+      padding: 1.5rem;
+      padding-top: 2.1rem; }
+      main .secciones ul li a {
+        padding: 0 0.5rem;
+        font-size: 2rem; }
+  footer .iconos .f {
+    color: #1778f2; }
+  footer .iconos .t {
+    color: #1da1f2; }
+  footer .iconos .i {
+    color: #f84279de; } }
