@@ -123,7 +123,7 @@ header {
           text-decoration: none;
           display: inline-block;
           line-height: 40px;
-          font-weight: 600;
+          font-weight: 700;
           font-size: 1.5rem;
           color: #000;
           margin: 0 1rem; }
@@ -142,7 +142,8 @@ main .imagenes {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    cursor: pointer; }
+    cursor: pointer;
+    display: block; }
     main .imagenes .carousel-inner .carousel-item img {
       width: 100%;
       height: 100%;
@@ -386,35 +387,52 @@ main .home {
   .img-tienda .img-top {
     width: 100%;
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    display: block; }
     .img-tienda .img-top img {
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      height: 100%; }
 
 .secciones {
   padding: 0;
   background-color: #000;
   text-align: center;
   height: 65px; }
-  .secciones ul {
-    display: block;
-    position: relative;
-    padding: 0 2rem;
-    margin: 0 auto; }
-    .secciones ul li {
-      display: inline-block;
-      padding: 0 3.5rem;
-      margin: 0; }
-      .secciones ul li a {
-        cursor: pointer;
-        text-decoration: none;
-        padding: 2.3rem 0.3rem 1.8rem 0.3rem;
-        display: block;
-        position: relative;
-        color: #fff;
-        font-size: 1.7rem;
-        font-weight: 700;
-        text-align: center; }
+  .secciones .items {
+    padding: 0;
+    height: 65px; }
+    .secciones .items .btn-seccion {
+      margin: 0;
+      position: relative;
+      text-align: left;
+      padding: 0 1.5rem;
+      font-size: 3rem;
+      height: 60px;
+      color: #fff; }
+    .secciones .items .desplegable {
+      display: block;
+      position: relative;
+      padding: 0 2rem;
+      margin: 0 auto; }
+      .secciones .items .desplegable .list {
+        list-style: none;
+        display: inline-block;
+        padding: 0 3.5rem;
+        margin: 0;
+        background-color: #000; }
+        .secciones .items .desplegable .list a {
+          text-decoration: none;
+          padding: 0 1rem;
+          display: inline-block;
+          position: relative;
+          color: #fff;
+          font-size: 1.7rem;
+          font-weight: 700;
+          text-align: center;
+          line-height: 40px; }
+          .secciones .items .desplegable .list a:hover {
+            color: #e2e9f1; }
 
 .tienda {
   overflow: hidden; }
@@ -433,317 +451,284 @@ main .home {
       margin-top: 3rem; }
       .tienda .articulos .foto img {
         width: 100%;
+        height: 100%;
         object-fit: cover; }
-      .tienda .articulos .foto .hover-foto {
-        /*  transition: ease all 200ms; */
-        /*  left: 0;
-          right: 0;
-          margin: auto; */
-        background-image: url(multimedia/flecha.png);
-        background-repeat: repeat;
-        overflow: hidden;
+      .tienda .articulos .foto .hover {
+        background-color: rgba(186, 186, 186, 0.603);
         position: absolute;
-        width: 100%;
+        width: 91%;
         height: 100%;
         top: 0;
         transform: scale(0);
-        transition: transform 0.5s; }
-        .tienda .articulos .foto .hover-foto img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-        .tienda .articulos .foto .hover-foto p {
-          font-size: 1.5rem;
+        transition: transform .5s; }
+        .tienda .articulos .foto .hover h1 {
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 2rem;
           font-weight: 400;
-          color: #000;
-          text-align: justify; }
+          text-align: center;
+          margin: 0;
+          padding: 8rem 1rem 8rem 1rem; }
+        .tienda .articulos .foto .hover p {
+          margin: 0;
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 1.3rem;
+          font-weight: 700;
+          background-color: #000;
+          padding: 0.5rem;
+          display: inline-block;
+          /* @include p(); */ }
+    .tienda .articulos .foto:hover .hover {
+      transform: scale(1); }
 
-/* .imagen-gal:hover .hover-galeria {
-        transform: scale(1);
-      } */
-.informacion {
-  margin-bottom: 5rem; }
-  .informacion h1 {
-    font-size: 3rem;
-    color: #FFD1E0;
-    font-weight: 600;
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem;
-    margin-bottom: 5rem; }
-  .informacion .info {
-    background: #ffd1e0; }
-    .informacion .info .items {
+/* .contacto {
+.title {
+
+  } 
+
+  & h1 {
+    @include h1();
+  }
+
+  & .info {
+    background: #ffd1e0;
+
+    & .items {
       display: flex;
       flex-flow: column wrap;
       justify-content: space-evenly;
-      margin-top: 3rem; }
-      .informacion .info .items div {
+      margin-top: 3rem;
+
+      & div {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center; }
-        .informacion .info .items div .mail {
-          color: #e2e9f1;
-          font-size: 3.5rem;
-          padding: 0.5rem;
-          transform: rotate(0);
-          margin-right: 7.5rem; }
-          .informacion .info .items div .mail:hover {
-            transform: rotate(360deg);
-            transition: all 0.3s linear;
-            color: #e2e9f1; }
-        .informacion .info .items div .cel {
-          color: #e2e9f1;
-          font-size: 3.5rem;
-          padding: 0.5rem;
-          transform: rotate(0);
-          margin-right: 8.5rem; }
-          .informacion .info .items div .cel:hover {
-            transform: rotate(360deg);
-            transition: all 0.3s linear;
-            color: #3f3f3f; }
-        .informacion .info .items div .dir {
-          color: #e2e9f1;
-          font-size: 3.5rem;
-          padding: 0.5rem;
-          transform: rotate(0); }
-          .informacion .info .items div .dir:hover {
-            transform: rotate(360deg);
-            transition: all 0.3s linear;
-            color: #DD4B3E; }
-        .informacion .info .items div h6 {
-          color: #fff;
-          font-size: 1.5rem;
-          margin: 1rem; }
-    .informacion .info .iconos {
-      display: flex;
-      justify-content: center;
-      font-size: 2.5rem;
-      text-align: center;
-      margin: 2rem 0; }
-      .informacion .info .iconos .f {
-        color: #fff;
-        padding: 1rem;
-        margin: 1rem;
-        transform: rotate(0); }
-        .informacion .info .iconos .f:hover {
-          transform: rotate(360deg);
-          transition: all 0.3s linear;
-          color: #1778f2; }
-      .informacion .info .iconos .t {
-        color: #fff;
-        padding: 1rem;
-        margin: 1rem;
-        transform: rotate(0); }
-        .informacion .info .iconos .t:hover {
-          transform: rotate(360deg);
-          transition: all 0.3s linear;
-          color: #1da1f2; }
-      .informacion .info .iconos .i {
-        color: #fff;
-        padding: 1rem;
-        margin: 1rem;
-        transform: rotate(0); }
-        .informacion .info .iconos .i:hover {
-          transform: rotate(360deg);
-          transition: all 0.3s linear;
-          color: #f84279de; }
-    .informacion .info .mapa {
-      padding: 3rem 0 3rem 6rem; }
-  .informacion .formulario {
-    background: #ffd1e0; }
-    .informacion .formulario .form {
+        justify-content: center;
+
+        & .mail {
+          @include icon();
+          margin-right: 7.5rem;
+
+          &:hover {
+            @include iconhover();
+            color: $color-sec;
+          }
+        }
+
+        & .cel {
+          @include icon();
+          margin-right: 8.5rem;
+
+          &:hover {
+            @include iconhover();
+            color: $color-negro;
+          }
+        }
+
+        & .dir {
+          @include icon();
+
+          &:hover {
+            @include iconhover();
+            color: $color-ubi;
+          }
+        }
+
+        & h6 {
+          @include infor();
+        }
+      }
+    }
+
+    & .iconos {
+      @include iconos();
+
+      & .f {
+        @include redes();
+
+        &:hover {
+          @include redeshover();
+          color: $color-facebook;
+        }
+      }
+
+      & .t {
+        @include redes();
+
+        &:hover {
+          @include redeshover();
+          color: $color-twitter;
+        }
+      }
+
+      & .i {
+        @include redes();
+
+        &:hover {
+          @include redeshover();
+          color: $color-instagram;
+        }
+      }
+    }
+
+    & .mapa {
+      padding: 3rem 0 3rem 6rem;
+    }
+  }
+
+  .formulario {
+    background: #ffd1e0;
+
+    & .form {
       display: flex;
       flex-flow: column nowrap;
-      justify-content: center; }
-      .informacion .formulario .form h3 {
-        text-align: right;
-        color: #030303;
-        margin-bottom: 5rem;
-        font-size: 2.5rem;
-        font-weight: 400;
+      justify-content: center;
+
+      & h3 {
+        @include h3orden();
         margin-bottom: 0;
         margin-top: 2rem;
-        color: #3f3f3f; }
-      .informacion .formulario .form input {
-        width: 75%;
-        padding: 0.5rem;
-        font-weight: 400;
-        outline: 0;
-        margin-left: 8rem !important;
-        margin-right: 4rem;
-        box-sizing: border-box; }
-        .informacion .formulario .form input:focus {
-          border: 1px solid #e2e9f1;
-          border-color: #FFD1E0; }
-      .informacion .formulario .form textarea {
-        width: 100%;
-        padding: 1rem;
-        color: #FFD1E0;
-        font-weight: 400;
-        outline: 0;
-        margin-left: 4rem;
-        box-sizing: border-box;
-        max-width: 90%;
-        min-width: 80%;
-        min-height: 25rem;
-        max-height: 40rem; }
-        .informacion .formulario .form textarea:focus {
-          border: 1px solid #e2e9f1;
-          border-color: #FFD1E0; }
-      .informacion .formulario .form div {
+        color: $color-negro;
+      }
+
+      & input {
+        @include relleno();
+
+        &:focus {
+          border: 1px solid $color-sec;
+          border-color: $color-pri;
+        }
+      }
+
+      & textarea {
+        @include textarea();
+
+        &:focus {
+          border: 1px solid $color-sec;
+          border-color: $color-pri;
+        }
+      }
+
+      & div {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly; }
-        .informacion .formulario .form div input {
-          margin-top: 5rem;
-          padding: 0.5rem;
-          border: transparent;
-          background: #FFD1E0;
-          color: #e2e9f1;
-          width: 40%;
-          margin-left: 8rem;
-          font-size: 2rem;
-          border-radius: 15rem;
-          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
-          margin: 2rem; }
+        justify-content: space-evenly;
+
+        & input {
+          @include boton();
+          margin: 2rem;
+        }
+      }
+    }
+  }
+}
 
 .titulos {
-  display: table; }
-  .titulos .row {
+  display: table;
+
+  & .row {
     padding: 90px 60px;
-    margin: 10px auto; }
-  .titulos .pagos {
-    display: block; }
-  .titulos .datos {
-    display: block; }
-  .titulos h5 {
-    font-size: 2.5rem;
-    color: #e2e9f1;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase; }
-  .titulos p {
-    text-align: right;
-    color: #030303;
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
-    font-weight: 400;
+    margin: 10px auto;
+  }
+
+  & .pagos {
+    display: block;
+  }
+
+  & .datos {
+    display: block;
+  }
+
+  & h5 {
+    @include h5();
+    text-transform: uppercase;
+  }
+
+  & p {
+    @include h3orden();
     padding: 0;
-    margin: 0; }
-  .titulos span {
+    margin: 0;
+  }
+
+  & span {
     display: inline-block;
     vertical-align: middle;
     margin-right: 4px;
     width: 20%;
-    color: #3f3f3f;
+    color: $color-negro;
     overflow: hidden;
-    padding: 0; }
-  .titulos img {
-    width: 10%; }
+    padding: 0;
+  }
 
-.comprar {
-  margin-bottom: 5rem; }
-  .comprar h1 {
-    font-size: 3rem;
-    color: #FFD1E0;
-    font-weight: 600;
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem;
-    margin-bottom: 5rem; }
-  .comprar h3 {
-    text-align: right;
-    color: #030303;
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-size: 2rem; }
-  .comprar .imag {
+  & img {
+    width: 10%;
+  }
+} */
+/* .comprar {
+  margin-bottom: 5rem;
+
+  h1 {
+    @include h1();
+  }
+
+  h3 {
+    @include h3orden();
+    font-size: $tam-2;
+  }
+
+  .imag {
     width: 90%;
-    overflow: hidden; }
-    .comprar .imag .image {
+    overflow: hidden;
+
+    .image {
       width: 100%;
       height: 100vh;
-      object-fit: cover; }
-  .comprar .texto {
+      object-fit: cover;
+    }
+  }
+
+  .texto {
     display: flex;
-    flex-flow: row wrap; }
-    .comprar .texto .icon {
-      color: #FFD1E0;
-      width: 10%; }
-      .comprar .texto .icon p {
-        font-size: 1.5rem;
+    flex-flow: row wrap;
+
+    .icon {
+      color: $color-pri;
+      width: 10%;
+
+      p {
+        font-size: $tam-1;
         text-transform: uppercase;
         text-align: justify;
         margin-bottom: 0 !important;
         font-weight: 400;
-        color: #3f3f3f; }
+        color: $color-negro;
+      }
+    }
+  }
+} */
+/* .faq {
+  margin-bottom: 5rem;
 
-.faq {
-  margin-bottom: 5rem; }
-  .faq h1 {
-    font-size: 3rem;
-    color: #FFD1E0;
-    font-weight: 600;
+  & h1 {
+    @include h1();
+  }
+
+  & .pregyresp h3 {
+    @include h3orden();
     text-align: center;
-    padding: 1rem;
-    margin: 1rem;
-    margin-bottom: 5rem; }
-  .faq .pregyresp h3 {
-    text-align: right;
-    color: #030303;
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-    text-align: center; }
-  .faq p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #000;
-    text-align: justify; }
-
-/* Dispositivos extra pequeños (teléfonos verticales, menos de 410px) */
-@media screen and (max-width: 410px) {
+  }
+  & p {
+    @include p();
+  }
+} */
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 350 px) */
+@media screen and (max-width: 350px) {
   header .top-negro .tel {
     padding-right: 0; }
-    header .top-negro .tel .text-right {
-      padding: 0 !important; }
-      header .top-negro .tel .text-right .btn-carro {
-        margin: 0 !important;
-        padding: 0 !important; }
     header .top-negro .tel a span {
       display: none !important; }
-  header .btn-carro {
-    margin-right: 0.7rem; }
-  header .logo .container {
-    height: 100px !important; }
-    header .logo .container img {
-      height: 70px; }
-  header .menu {
-    padding: 0; }
-    header .menu .container {
-      padding: 0; }
-      header .menu .container .navbar {
-        padding: 0; }
-        header .menu .container .navbar .btn-nav {
-          padding: 0 1.5rem; }
-        header .menu .container .navbar .menu-desplegable .li {
-          margin-top: 0.5rem;
-          background-color: #3f3f3f !important; }
-        header .menu .container .navbar .menu-desplegable li {
-          display: block;
-          border-bottom: 1px solid #FFD1E0;
-          background-color: #3f3f3f; }
-          header .menu .container .navbar .menu-desplegable li a {
-            line-height: 36px;
-            font-size: 1.5rem;
-            padding: 0;
-            color: #fff;
-            text-align: center;
-            margin: 0; }
-          header .menu .container .navbar .menu-desplegable li span {
-            margin: 0; } }
+  main .home .texto {
+    padding: 2rem !important; } }
 
 /* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px) */
 @media screen and (max-width: 576px) {
@@ -853,15 +838,11 @@ main .home {
       margin: 3rem 0 0 0 !important; }
     main .destacados .product p {
       margin-bottom: 4rem !important; }
-  main .secciones ul {
-    height: 65px; }
-    main .secciones ul li {
-      padding: 1.5rem;
-      padding-top: 2.1rem;
-      /* display: block; */ }
-      main .secciones ul li a {
-        padding: 0 0.5rem;
-        font-size: 2rem; }
+  main .secciones .desplegable {
+    z-index: 5; }
+    main .secciones .desplegable .list {
+      display: block !important;
+      border-bottom: 1px solid #e2e9f1; }
   footer .informacion {
     flex-direction: column; }
   footer .iconos .f {
@@ -893,14 +874,18 @@ main .home {
         right: inherit !important; }
   main .destacados h2 {
     font-size: 3.5rem; }
-  main .secciones ul {
-    height: 65px; }
-    main .secciones ul li {
-      padding: 1.5rem;
-      padding-top: 2.1rem; }
-      main .secciones ul li a {
-        padding: 0 0.5rem;
-        font-size: 2rem; }
+  main .secciones {
+    height: 50px; }
+    main .secciones .items {
+      height: 50px; }
+      main .secciones .items .desplegable {
+        padding: 0;
+        margin: 0 auto; }
+        main .secciones .items .desplegable .list {
+          padding: 0 1.5rem; }
+          main .secciones .items .desplegable .list a {
+            padding: 0 0.5rem;
+            font-size: 1.5rem; }
   footer .iconos .f {
     color: #1778f2; }
   footer .iconos .t {
