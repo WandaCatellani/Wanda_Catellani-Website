@@ -19,7 +19,7 @@
   margin: 0;
   color: #000;
   background-color: $color-pri;
-  padding: 0.5rem;
+  padding: 5px;
   bottom: -11px;
   border-radius: 999px;
   right: -8px;
@@ -41,9 +41,11 @@ header {
     @include top();
 
     .tel a {
+      @include top-a();
+
       .whats {
         color: $color-whats;
-        margin-right: 1rem;
+        margin-right: 10px;
 
         &:hover {
           transition: all 0.2s;
@@ -52,14 +54,12 @@ header {
         }
       }
 
-      @include top-a();
-
       span {
         @include top-span();
       }
     }
 
-    .text-right {
+    .carrito {
       .btn-carro {
         @include btn-carro();
 
@@ -76,26 +76,24 @@ header {
   }
 
   .logo {
-    background-color: $color-sec;
-    z-index: 3;
-    width: 100%;
-    height: 100px;
+    @include logo();
 
     .container {
-      height: 90px;
+      height: 180px;
       width: 100%;
       display: flex;
       align-items: center;
       cursor: pointer;
       text-align: center;
       margin: auto;
+      z-index: 3;
 
       a {
         display: block;
         margin: auto;
 
         img {
-          height: 95px;
+          height: 180px;
         }
       }
     }
@@ -127,7 +125,7 @@ header {
           text-decoration: none;
           display: inline-block;
           line-height: 40px;
-          font-weight: 700;
+          font-weight: 600;
           font-size: $tam-1;
           color: #000;
           margin: 0 1rem;
@@ -141,7 +139,8 @@ header {
           color: $color-negro;
           font-size: $tam-1;
           font-weight: 600;
-          margin: 0 1.5rem;
+          line-height: 40px;
+          margin: 0 15px;
         }
       }
     }
@@ -149,15 +148,22 @@ header {
 }
 //          HOME
 main {
-  //Carousel
+  margin-bottom: 20px;
+
   .imagenes {
     background-color: $color-pri;
-    height: 100vh;
+    height: 505px;
+    padding: 0;
 
     .carousel-inner {
+      width: 100%;
+      height: 505px;
+      padding: 0 15px;
+      max-width: 992px;
+
       .carousel-item {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         overflow: hidden;
         cursor: pointer;
         display: block;
@@ -166,6 +172,7 @@ main {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          display: block;
         }
       }
     }
@@ -181,78 +188,82 @@ main {
   // Home
   .home {
     padding: 0;
+    height: 644px;
+    overflow: hidden;
 
     .row {
       margin: 0;
-    }
 
-    .left {
-      padding: 0;
+      .left {
+        padding: 0;
 
-      .centrar-img {
-        position: relative;
-        overflow: hidden;
-        height: 85vh;
+        .centrar-img {
+          position: relative;
+          overflow: hidden;
+          height: 644px;
 
-        img {
-          position: absolute;
-          width: 100%;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .txt {
+          @include txt();
+
+          .texto {
+            @include texto();
+
+            h1 {
+              @include texto-h1();
+            }
+
+            p {
+              @include texto-p();
+            }
+
+            a {
+              @include texto-a();
+            }
+          }
         }
       }
 
-      .txt {
-        @include txt();
+      .right {
+        padding: 0;
 
-        .texto {
-          @include texto();
+        .centrar-img {
+          position: relative;
+          overflow: hidden;
+          height: 644px;
 
-          h1 {
-            @include texto-h1();
-          }
-
-          p {
-            @include texto-p();
-          }
-
-          a {
-            @include texto-a();
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
           }
         }
-      }
-    }
 
-    .right {
-      padding: 0;
+        .txt {
+          @include txt();
 
-      .centrar-img {
-        position: relative;
-        overflow: hidden;
-        height: 85vh;
+          .texto {
+            @include texto();
+            float: left;
 
-        img {
-          position: absolute;
-          width: 100%;
-        }
-      }
+            h1 {
+              @include texto-h1();
+            }
 
-      .txt {
-        @include txt();
+            p {
+              @include texto-p();
+            }
 
-        .texto {
-          @include texto();
-          float: left;
-
-          h1 {
-            @include texto-h1();
-          }
-
-          p {
-            @include texto-p();
-          }
-
-          a {
-            @include texto-a();
-            background-color: $color-sec;
+            a {
+              @include texto-a();
+              background-color: $color-sec;
+            }
           }
         }
       }
@@ -262,6 +273,10 @@ main {
 // Destacados
 .destacados {
   padding: 0;
+
+  hr {
+    visibility: hidden;
+  }
 
   h2 {
     @include title-destac();
@@ -294,14 +309,12 @@ main {
 
   .informacion {
     display: flex;
-    width: 90%;
+    width: 80%;
     justify-content: space-evenly;
-    margin: auto;
-    border-bottom: 1px solid $color-pri;
+    margin: 10px auto;
 
     .infor {
-      @include iconos();
-      flex-direction: column;
+      @include infor();
 
       a {
         text-decoration: none;
@@ -310,7 +323,7 @@ main {
 
       .whats {
         color: $color-whats;
-        padding: 1rem;
+        padding: 1px;
         font-size: $tam-3;
 
         &:hover {
@@ -320,7 +333,7 @@ main {
 
       .mail {
         color: #fff;
-        padding: 1rem;
+        padding: 10px;
 
         &:hover {
           cursor: pointer;
@@ -329,480 +342,88 @@ main {
 
       .dir {
         color: $color-ubi;
-        padding: 1rem;
+        padding: 10px;
 
         &:hover {
           cursor: pointer;
         }
       }
 
-      .infor {
-        @include infor();
+      p {
+        color: #fff;
+        font-size: $tam-1;
+        margin: 10px;
       }
     }
   }
 
+  hr {
+    visibility: hidden;
+  }
+
   .iconos {
     @include iconos();
-  }
 
-  .f {
-    @include redes();
+    .f {
+      @include redes();
 
-    &:hover {
-      @include redeshover();
-      color: $color-facebook;
+      &:hover {
+        @include redeshover();
+        color: $color-facebook;
+      }
     }
-  }
 
-  .t {
-    @include redes();
+    .t {
+      @include redes();
 
-    &:hover {
-      @include redeshover();
-      color: $color-twitter;
+      &:hover {
+        @include redeshover();
+        color: $color-twitter;
+      }
     }
-  }
 
-  .i {
-    @include redes();
+    .i {
+      @include redes();
 
-    &:hover {
-      @include redeshover();
-      color: $color-instagram;
+      &:hover {
+        @include redeshover();
+        color: $color-instagram;
+      }
     }
   }
 
   .copy {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 30px 0 10px;
 
     h6 {
       @include title-copy();
     }
   }
 }
-//          FIN
-//          TIENDA
-.img-tienda {
-  background-color: $color-pri;
-  padding: 0;
-  height: 85vh;
 
-  .img-top {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-    }
-  }
-}
-
-.secciones {
-  padding: 0;
-  background-color: #000;
-  text-align: center;
-  height: 65px;
-
-  .items {
-    padding: 0;
-    height: 65px;
-
-    .btn-seccion {
-      margin: 0;
-      position: relative;
-      text-align: left;
-      padding: 0 1.5rem;
-      font-size: 3rem;
-      height: 60px;
-      color: #fff;
-    }
-
-    .desplegable {
-      display: block;
-      position: relative;
-      padding: 0 2rem;
-      margin: 0 auto;
-
-      .list {
-        list-style: none;
-        display: inline-block;
-        padding: 0 3.5rem;
-        margin: 0;
-        background-color: #000;
-
-        a {
-          text-decoration: none;
-          padding: 0 1rem;
-          display: inline-block;
-          position: relative;
-          color: #fff;
-          font-size: 1.7rem;
-          font-weight: 700;
-          text-align: center;
-          line-height: 40px;
-
-          &:hover {
-            color: $color-sec;
-          }
-        }
-      }
-    }
-  }
-}
-
-.tienda {
-  overflow: hidden;
-
-  .articulos {
-    /* margin-bottom: 5rem; */
-    margin-top: 3rem;
-
-    .foto {
-      display: block;
-      text-align: center;
-      overflow: hidden;
-      width: 100%;
-      margin: 0;
-      position: relative;
-      cursor: pointer;
-      height: 240px;
-      margin-top: 3rem;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .hover {
-        @include hover();
-
-        h1 {
-          text-transform: uppercase;
-          color: #fff;
-          font-size: $tam-2;
-          font-weight: 400;
-          text-align: center;
-          margin: 0;
-          padding: 8rem 1rem 8rem 1rem;
-        }
-
-        p {
-          margin: 0;
-          text-transform: uppercase;
-          color: #fff;
-          font-size: 1.3rem;
-          font-weight: 700;
-          background-color: #000;
-          padding: 0.5rem;
-          display: inline-block;
-          /* @include p(); */
-        }
-      }
-    }
-
-    .foto:hover .hover {
-      transform: scale(1);
-    }
-  }
-}
-//          FIN
-//          CONTACTO
-/* .contacto {
-.title {
-
-  } 
-
-  & h1 {
-    @include h1();
-  }
-
-  & .info {
-    background: #ffd1e0;
-
-    & .items {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: space-evenly;
-      margin-top: 3rem;
-
-      & div {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-
-        & .mail {
-          @include icon();
-          margin-right: 7.5rem;
-
-          &:hover {
-            @include iconhover();
-            color: $color-sec;
-          }
-        }
-
-        & .cel {
-          @include icon();
-          margin-right: 8.5rem;
-
-          &:hover {
-            @include iconhover();
-            color: $color-negro;
-          }
-        }
-
-        & .dir {
-          @include icon();
-
-          &:hover {
-            @include iconhover();
-            color: $color-ubi;
-          }
-        }
-
-        & h6 {
-          @include infor();
-        }
-      }
-    }
-
-    & .iconos {
-      @include iconos();
-
-      & .f {
-        @include redes();
-
-        &:hover {
-          @include redeshover();
-          color: $color-facebook;
-        }
-      }
-
-      & .t {
-        @include redes();
-
-        &:hover {
-          @include redeshover();
-          color: $color-twitter;
-        }
-      }
-
-      & .i {
-        @include redes();
-
-        &:hover {
-          @include redeshover();
-          color: $color-instagram;
-        }
-      }
-    }
-
-    & .mapa {
-      padding: 3rem 0 3rem 6rem;
-    }
-  }
-
-  .formulario {
-    background: #ffd1e0;
-
-    & .form {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-
-      & h3 {
-        @include h3orden();
-        margin-bottom: 0;
-        margin-top: 2rem;
-        color: $color-negro;
-      }
-
-      & input {
-        @include relleno();
-
-        &:focus {
-          border: 1px solid $color-sec;
-          border-color: $color-pri;
-        }
-      }
-
-      & textarea {
-        @include textarea();
-
-        &:focus {
-          border: 1px solid $color-sec;
-          border-color: $color-pri;
-        }
-      }
-
-      & div {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-
-        & input {
-          @include boton();
-          margin: 2rem;
-        }
-      }
-    }
-  }
-}
-
-.titulos {
-  display: table;
-
-  & .row {
-    padding: 90px 60px;
-    margin: 10px auto;
-  }
-
-  & .pagos {
-    display: block;
-  }
-
-  & .datos {
-    display: block;
-  }
-
-  & h5 {
-    @include h5();
-    text-transform: uppercase;
-  }
-
-  & p {
-    @include h3orden();
-    padding: 0;
-    margin: 0;
-  }
-
-  & span {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 4px;
-    width: 20%;
-    color: $color-negro;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  & img {
-    width: 10%;
-  }
-} */
-//          FIN
-//          COMO COMPRAR
-/* .comprar {
-  margin-bottom: 5rem;
-
-  h1 {
-    @include h1();
-  }
-
-  h3 {
-    @include h3orden();
-    font-size: $tam-2;
-  }
-
-  .imag {
-    width: 90%;
-    overflow: hidden;
-
-    .image {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-    }
-  }
-
-  .texto {
-    display: flex;
-    flex-flow: row wrap;
-
-    .icon {
-      color: $color-pri;
-      width: 10%;
-
-      p {
-        font-size: $tam-1;
-        text-transform: uppercase;
-        text-align: justify;
-        margin-bottom: 0 !important;
-        font-weight: 400;
-        color: $color-negro;
-      }
-    }
-  }
-} */
-//          FIN
-//          FAQ
-/* .faq {
-  margin-bottom: 5rem;
-
-  & h1 {
-    @include h1();
-  }
-
-  & .pregyresp h3 {
-    @include h3orden();
-    text-align: center;
-  }
-  & p {
-    @include p();
-  }
-} */
-//
-//
 //          MEDIA QUERY
-/* Dispositivos extra pequeños (teléfonos verticales, menos de 350 px) */
-@media screen and (max-width: 350px) {
+
+/*  Dispositivos medianos (tabletas, 768 px y más) */
+@media screen and (max-width: 991px) {
   header {
-    .top-negro .tel {
-      padding-right: 0;
-
-      a span {
-        display: none !important;
-      }
+    .top-negro {
+      padding: 0;
     }
-  }
 
-  main {
-    .home {
-      .texto {
-        padding: 2rem !important;
-      }
-    }
-  }
-}
+    .logo {
+      position: relative;
+      margin-top: 0;
+      height: 160px;
 
-/* Dispositivos extra pequeños (teléfonos verticales, menos de 576 px) */
-@media screen and (max-width: 576px) {
-  header {
-    .top-negro .tel {
-      padding-right: 0;
+      .container {
+        height: 160px;
 
-      a span {
-        display: none !important;
+        a img {
+          height: 150px;
+        }
       }
     }
 
-    .btn-carro {
-      margin-right: 0.7rem;
-    }
-
-    .logo .container {
-      height: 100px !important;
-
-      img {
-        height: 70px;
-      }
-    }
     .menu {
       padding: 0;
 
@@ -812,27 +433,202 @@ main {
         .navbar {
           padding: 0;
 
+          .menu-desplegable li span {
+            margin: 0 13px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .imagenes {
+      height: 575px;
+      display: inline-block;
+      width: 100%;
+
+      .carousel-inner {
+        height: 575px;
+        padding: 0;
+      }
+    }
+
+    .home {
+      height: auto;
+
+      .row {
+        height: auto;
+
+        .left {
+          .centrar-img {
+            height: 300px;
+
+            img {
+              margin-left: 45px;
+            }
+          }
+
+          .txt {
+            top: 0px;
+            position: relative;
+            height: 200px;
+            background-image: none;
+            background-color: #fff;
+
+            .texto {
+              width: 100%;
+              height: 100%;
+              padding: 45px 75px;
+
+              a {
+                position: absolute;
+                bottom: 45px;
+                left: 75px;
+                right: inherit;
+              }
+            }
+          }
+        }
+
+        .right {
+          .centrar-img {
+            height: 300px;
+
+            img {
+              margin-right: 45px;
+            }
+          }
+
+          .txt {
+            top: 0px;
+            position: relative;
+            height: 200px;
+            background-image: none;
+            background-color: #fff;
+
+            .texto {
+              width: 100%;
+              height: 100%;
+              padding: 45px 75px;
+
+              a {
+                position: absolute;
+                bottom: 45px;
+                left: 75px;
+                right: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .destacados {
+      hr {
+        border-top: 1px solid #808080;
+        margin: 0 40px;
+        visibility: visible;
+      }
+
+      h2 {
+        font-size: $tam-5;
+      }
+
+      .prod-cont {
+        max-width: 710px;
+        margin: auto;
+      }
+    }
+  }
+
+  .footer {
+    hr {
+      margin: 0 60px;
+      visibility: visible;
+      border-bottom: 1px solid $color-pri;
+    }
+
+    .iconos {
+      .f {
+        color: $color-facebook;
+      }
+
+      .t {
+        color: $color-twitter;
+      }
+
+      .i {
+        color: $color-instagram;
+      }
+    }
+  }
+}
+
+/* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
+@media screen and (max-width: 767px) {
+  header {
+    .top-negro {
+      height: 30px;
+
+      .tel a {
+        font-size: 15px;
+        line-height: 30px;
+
+        span {
+          display: none;
+        }
+      }
+
+      .carrito .btn-carro {
+        width: 38px;
+        height: 30px;
+        padding: 4px 8px;
+
+        img {
+          width: 22px;
+        }
+      }
+    }
+
+    .logo {
+      height: 140px;
+
+      .container {
+        height: 140px;
+
+        a img {
+          height: 140px;
+        }
+      }
+    }
+
+    .menu {
+      height: 40px;
+      padding: 0;
+
+      .container {
+        padding: 0;
+        height: 40px;
+
+        .navbar {
+          padding: 0;
+
           .btn-nav {
-            padding: 0 1.5rem;
+            padding: 0 0 0 15px;
           }
 
           .menu-desplegable {
-            .li {
-              margin-top: 0.5rem;
-              background-color: $color-negro !important;
-            }
-
             li {
               display: block;
               border-bottom: 1px solid $color-pri;
               background-color: $color-negro;
 
               a {
-                line-height: 36px;
-                font-size: $tam-1;
-                padding: 0;
-                color: #fff;
                 text-align: center;
+                line-height: 42px;
+                font-size: $tam-1;
+                color: #fff;
+                padding: 0;
                 margin: 0;
               }
 
@@ -847,29 +643,197 @@ main {
   }
 
   main {
-    .home {
-      .txt {
-        padding: 0;
-        width: 100%;
-        top: 0;
-        position: relative;
+    .imagenes {
+      height: 385px;
 
-        .texto {
-          padding: 2rem !important;
+      .carousel-inner {
+        height: 385px;
+      }
+    }
+
+    .home .row {
+      .left {
+        .centrar-img {
+          height: 322px;
+        }
+
+        .txt {
+          height: 100px;
+
+          .texto {
+            width: 100%;
+            height: 100%;
+            padding: 23px;
+
+            h1 {
+              font-size: 15px;
+            }
+
+            p {
+              font-size: 12px;
+              width: 60%;
+            }
+
+            a {
+              bottom: inherit;
+              top: 35px;
+              left: inherit;
+              right: 35px;
+            }
+          }
+        }
+      }
+
+      .right {
+        .centrar-img {
+          height: 322px;
+        }
+
+        .txt {
+          height: 100px;
+
+          .texto {
+            width: 100%;
+            height: 100%;
+            padding: 23px;
+
+            h1 {
+              font-size: 15px;
+            }
+
+            p {
+              font-size: 12px;
+              width: 60%;
+            }
+
+            a {
+              bottom: inherit;
+              top: 35px;
+              left: inherit;
+              right: 35px;
+            }
+          }
+        }
+      }
+    }
+
+    .destacados {
+      hr {
+        margin: 0 auto;
+        visibility: visible;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      .prod-cont {
+        max-width: 480px;
+        margin: auto;
+
+        .product {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .informacion {
+      flex-direction: column;
+
+      .infor {
+        margin: 20px 0;
+      }
+
+      .iconos {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  header {
+    .top-negro .container {
+      height: 30px;
+
+      .tel {
+        padding-left: 10px;
+      }
+    }
+    .carrito .btn-carro {
+      margin-right: 7px;
+    }
+
+    .logo {
+      height: 120px;
+
+      .container {
+        height: 120px;
+
+        a img {
+          height: 120px;
+        }
+      }
+    }
+
+    .menu .container .navbar .menu-desplegable li {
+      a {
+        line-height: 36px;
+        font-size: 13px;
+        padding: 0px 15px;
+      }
+    }
+  }
+
+  main {
+    .imagenes {
+      height: 280px;
+
+      .carousel-inner {
+        height: 290px;
+      }
+    }
+
+    .home .row {
+      .left {
+        .centrar-img {
+          height: 215px;
+        }
+
+        .txt .texto {
+          padding: 20px;
+
+          a {
+            width: 100px;
+            right: 20px;
+            font-size: 14px;
+          }
 
           h1 {
-            font-size: 1.4rem !important;
+            font-size: 14px;
           }
+        }
+      }
 
-          p {
-            font-size: 1.2rem !important;
-            width: 60%;
-          }
+      .right {
+        .centrar-img {
+          height: 215px;
+        }
+
+        .txt .texto {
+          padding: 20px;
 
           a {
-            font-size: 1.4rem;
-            width: 100px !important;
-            right: 2rem;
+            width: 100px;
+            right: 20px;
+            font-size: 14px;
+          }
+
+          h1 {
+            font-size: 14px;
           }
         }
       }
@@ -877,214 +841,12 @@ main {
 
     .destacados {
       h2 {
-        font-size: 1.8rem !important;
-        margin: 2.5rem auto;
-        padding: 0;
-      }
-      .product {
-        h3 {
-          margin: 3rem 0 0 0 !important;
-        }
-        p {
-          margin-bottom: 4rem !important;
-        }
-      }
-    }
-  }
-
-  footer {
-    .informacion {
-      flex-direction: column;
-    }
-  }
-}
-
-/* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
-@media screen and (max-width: 767px) {
-  header .logo .container {
-    height: 100px;
-
-    img {
-      height: 80px;
-    }
-  }
-
-  .menu {
-    height: 40px;
-    padding: 0;
-
-    .container {
-      padding: 0;
-
-      .navbar {
-        padding: 0;
-
-        .btn-nav {
-          padding: 0 1.5rem;
-        }
-
-        .menu-desplegable {
-          .li {
-            margin-top: 0.5rem;
-            background-color: $color-negro !important;
-          }
-
-          li {
-            display: block !important;
-            border-bottom: 1px solid $color-pri;
-            background-color: $color-negro;
-
-            a {
-              text-align: center;
-              line-height: 42px;
-              font-size: $tam-1;
-              color: #fff !important;
-              padding: 0;
-              margin: 0 !important;
-            }
-
-            span {
-              margin: 0 !important;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  main {
-    .home {
-      .txt {
-        height: 100px !important;
-
-        .texto {
-          padding: 2.3rem !important;
-          width: 100% !important;
-          height: 100% !important;
-        }
-      }
-    }
-    .destacados {
-      h2 {
-        font-size: $tam-2;
-      }
-      .product {
-        text-align: center;
-
-        h3 {
-          margin: 3rem 0 0 0 !important;
-        }
-        p {
-          margin-bottom: 4rem !important;
-        }
-      }
-    }
-
-    .secciones {
-      .desplegable {
-        z-index: 5;
-
-        .list {
-          display: block !important;
-          border-bottom: 1px solid $color-sec;
-        }
-      }
-    }
-  }
-
-  footer {
-    .informacion {
-      flex-direction: column;
-    }
-
-    .iconos {
-      .f {
-        color: $color-facebook;
+        font-size: 18px;
+        margin: 25px auto;
       }
 
-      .t {
-        color: $color-twitter;
-      }
-
-      .i {
-        color: $color-instagram;
-      }
-    }
-  }
-}
-
-/*  Dispositivos medianos (tabletas, 768 px y más) */
-@media screen and (max-width: 991px) {
-  .menu .menu-desplegable li span {
-    margin: 0 1rem;
-  }
-
-  main {
-    .home {
-      .centrar-img {
-        height: 65vh !important;
-      }
-
-      .txt {
-        position: relative !important;
-        top: 0 !important;
-        height: 200px !important;
-        background-color: #fff !important;
-
-        .texto {
-          width: 100% !important;
-          height: 100% !important;
-          padding: 4.5rem 7.5rem !important;
-
-          a {
-            position: absolute !important;
-            bottom: 4.5rem !important;
-            left: 7.5rem !important;
-            right: inherit !important;
-          }
-        }
-      }
-    }
-
-    .destacados h2 {
-      font-size: $tam-5;
-    }
-
-    .secciones {
-      height: 50px;
-
-      .items {
-        height: 50px;
-
-        .desplegable {
-          padding: 0;
-          margin: 0 auto;
-
-          .list {
-            padding: 0 1.5rem;
-
-            a {
-              padding: 0 0.5rem;
-              font-size: $tam-1;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  footer {
-    .iconos {
-      .f {
-        color: $color-facebook;
-      }
-
-      .t {
-        color: $color-twitter;
-      }
-
-      .i {
-        color: $color-instagram;
+      .prod-cont {
+        max-width: 320px;
       }
     }
   }
