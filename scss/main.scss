@@ -150,10 +150,6 @@ header {
 /*  Dispositivos medianos (tabletas, 768 px y más) */
 @media screen and (max-width: 991px) {
   header {
-    .top-negro {
-      padding: 0;
-    }
-
     .logo {
       position: relative;
       margin-top: 0;
@@ -1032,10 +1028,10 @@ main {
 //
 //
 //          CONTACTO
-/* .contacto {
-.title {
+.contacto {
+/* .title {
 
-  } 
+  } */ 
 
   & h1 {
     @include h1();
@@ -1213,7 +1209,7 @@ main {
   & img {
     width: 10%;
   }
-} */
+} 
 //          FIN
 //          COMO COMPRAR
 /* .comprar {
