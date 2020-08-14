@@ -356,7 +356,9 @@ main {
         font-size: 15px;
         margin: 10px; }
   .footer hr {
-    visibility: hidden; }
+    margin: 0 60px;
+    visibility: visible;
+    border-bottom: 1px solid #FFD1E0; }
   .footer .iconos {
     display: flex;
     justify-content: center;
@@ -475,10 +477,6 @@ main {
   main .destacados .prod-cont {
     max-width: 710px;
     margin: auto; }
-  .footer hr {
-    margin: 0 60px;
-    visibility: visible;
-    border-bottom: 1px solid #FFD1E0; }
   .footer .iconos .f {
     color: #1778f2; }
   .footer .iconos .t {
