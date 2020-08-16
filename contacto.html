@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <header class="sticky-top">
+  <header>
 
     <div class="container-fluid top-negro">
       <div class="container">
@@ -92,94 +92,57 @@
   </header>
 
   <main class="contacto">
-    <div class="container title">
-      <h1>CONTACTO</h1>
-    </div>
+    <div class="container-fluid informacion">
+      <div class="container info">
+        <div class="row">
+          <div class="col-12 formulario">
 
-    <div class="row">
-      <div class="col-md-6 col-lg-6 info">
-        <div class="items">
-          <div>
-            <i class="far fa-envelope mail"></i>
-            <h6>cwand07@gmail.com</h6>
-          </div>
-          <div>
-            <i class="fas fa-mobile-alt cel"></i>
-            <h6>(+54) 280 - 4021588</h6>
-          </div>
-          <div>
-            <i class="fas fa-map-marker-alt dir"></i>
-            <h6>Monseñor Pablo Cabrera 2393</h6>
-          </div>
-        </div>
+            <form class="form" action="formulario" method="">
+              <label for="nombre"><span class="text-muted"></span></label>
+              <input type="text" name="nombre" id="name" placeholder="Nombre" class="cambio-form">
 
-        <div class="iconos">
-          <a href=" https://www.facebook.com/wcatellani/">
-            <i class="fab fa-facebook-f f"></i></a>
-          <a href="https://twitter.com/cwand7">
-            <i class="fab fa-twitter t"></i></a>
-          <a href="https://www.instagram.com/cwand7/">
-            <i class="fab fa-instagram i"></i></a>
-        </div>
+              <label for="apellido"></label><span class="text-muted"></span></label>
+              <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="cambio-form">
 
-        <div class="mapa">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.146553835533!2d-64.20988228530747!3d-31.382522301754026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298e52ed5a13d%3A0xeaa1513b0111b12d!2sAv.%20Monse%C3%B1or%20Pablo%20Cabrera%202393%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1592258866513!5m2!1ses-419!2sar"
-            width="350" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-            tabindex="0">
-          </iframe>
+              <label for="movil"><span class="text-muted"></span></label>
+              <input type="text" name="numero" id="placeholder" placeholder="Móvil" class="cambio-form">
+
+              <label for="email"><span class="text-muted"></span></label>
+              <input type="text" name="email" id="email" placeholder="E-Mail" class="cambio-form">
+<!-- 
+              <div class="seleccion">
+              <label for="producto1">Tortas</label><br>
+              <input type="radio" id="producto1" name="producto1" value="Tortas"></input>
+
+              <label for="producto2">Postres</label><br>
+              <input type="radio" id="producto2" name="producto2" value="Postres"></input>
+
+              <label for="producto3">Tartas</label><br>
+              <input type="radio" id="producto3" name="producto3" value="Tartas"></input>
+
+              <label for="producto4">Exisiteces</label><br>
+              <input type="radio" id="producto4" name="producto4" value="Exisiteces"></input>
+
+              <label for="producto5">Individuales</label><br>
+              <input type="radio" id="producto5" name="producto5" value="Individuales"></input>
+              </input>
+              </div> -->
+
+              <textarea name="message" class="cambio-form" placeholder="Ingresa aqui tu mensaje"></textarea>
+
+              <div>
+                <button type="button" value="Enviar" onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
+              </div>
+
+              <div class="logo-marca">
+                <img src="multimedia/logo.png" alt="logo marca">
+              </div>
+            </form>
+
+          </div>
         </div>
       </div>
-
-
-      <div class="col-md-6 col-lg-6 formulario">
-        <form class="form" action="formulario" method="">
-
-          <h3>Nombre</h3>
-          <input type="text" name="nombre" id="name" placeholder="Nombre">
-
-          <h3>Apellido</h3>
-          <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-
-          <h3>Teléfono</h3>
-          <input type="text" name="numero" id="placeholder">
-
-          <h3>Mail (Opcional)</h3>
-          <input type="text" name="email" id="email" placeholder="name@example.com">
-
-          <h3>Mensaje (Opcional)</h3>
-          <textarea placeholder="Ingresa aqui el mensaje"></textarea>
-
-          <div>
-            <input type="button" value="Borrar"></input>
-            <input type="button" value="Enviar"></input>
-          </div>
-        </form>
-      </div>
     </div>
-    </div>
-
-    <section class="container titulos">
-      <div class="row">
-        <div class="col-md-6 col-lg-6 pagos">
-          <span><i class="fa fa-credit-card" aria-hidden="true"></i></span>
-          <h5>ABONA HASTA EN 12 PAGOS</h5>
-          <p>CON TODAS LAS TARJETAS</p>
-          <img src="multimedia/american.png" alt="">
-          <img src="multimedia/cabal.png" alt="">
-          <img src="multimedia/mastercard.png" alt="">
-          <img src="multimedia/mercadopago.png" alt="">
-          <img src="multimedia/naranja.png" alt="">
-          <img src="multimedia/nativa.png" alt="">
-          <img src="multimedia/visa.png" alt="">
-        </div>
-        <div class="col-md-6 col-lg-6 datos">
-          <span><i class="fas fa-lock"></i></span>
-          <h5>SITIO SEGURO</h5>
-          <p>PROTEGEMOS TUS DATOS</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="container-fluid footer">
