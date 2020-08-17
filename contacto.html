@@ -93,41 +93,44 @@
 
   <main class="contacto">
     <div class="container-fluid informacion">
-      <div class="container info">
+        <div class="container info">
         <div class="row">
           <div class="col-12 formulario">
 
             <form class="form" action="formulario" method="">
 
-              <div class="col-12 col">
-                <label for="nombre"><span class="text-muted"></span></label>
-                <input type="text" name="nombre" id="name" placeholder="Nombre (*)" class="cambio-form">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 info-form">
+                  <label for="nombre"><span class="text-muted"></span></label>
+                  <input type="text" name="nombre" id="name" placeholder="Nombre (*)" class="cambio-form">
+                </div>
 
-                <label for="apellido"></label><span class="text-muted"></span></label>
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido (*)" class="cambio-form">
-
+                <div class="col-12 col-md-6 col-lg-6 info-form">
+                  <label for="apellido"></label><span class="text-muted"></span></label>
+                  <input type="text" name="apellido" id="apellido" placeholder="Apellido (*)" class="cambio-form">
+                </div>
               </div>
 
-              <div class="col-12 col">
-                <label for="movil"><span class="text-muted"></span></label>
-                <input type="text" name="numero" id="placeholder" placeholder="Móvil (*)" class="cambio-form">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 info-form"> <label for="movil"><span class="text-muted"></span></label>
+                  <input type="text" name="numero" id="placeholder" placeholder="Móvil (*)" class="cambio-form">
+                </div>
 
-                <label for="email"><span class="text-muted"></span></label>
-                <input type="text" name="email" id="email" placeholder="E-Mail (*)" class="cambio-form">
+                <div class="col-12 col-md-6 col-lg-6 info-form">
+                  <label for="email"><span class="text-muted"></span></label>
+                  <input type="text" name="email" id="email" placeholder="E-Mail (*)" class="cambio-form">
+                </div>
               </div>
 
-              <div class="col-12">
-                <textarea name="message" class="cambio-form" placeholder="Ingresa aqui tu mensaje"></textarea>
+              <div class="row">
+                <div class="col-12 foot">
+                  <textarea name="message" placeholder="Ingresa aqui tu mensaje"></textarea>
+                </div>
               </div>
 
-              <div class="col-12">
-                <button type="button" value="Enviar"
-                  onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
-              </div>
-
-              <div class="foot">
-                <div class="col-12 col-md-6 col-lg-6 seleccion">
-                  <h3>Motivo de contacto:</h3>
+              <div class="row">
+                <div class="col-12 seleccion">
+                  <h3>Motivo de contacto :</h3>
 
                   <div>
                     <label for="producto1">Tortas</label><br>
@@ -155,16 +158,18 @@
                     </input>
                   </div>
                 </div>
+              </div>
 
-                <div class="col-12 col-md-6 col-lg-6 logo-marca">
-                  <img src="multimedia/logo.png" alt="logo marca">
+              <div class="row">
+                <div class="col-12 btn-enviar">
+                  <button type="button" value="Enviar"
+                    onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
                 </div>
               </div>
+            </form>
           </div>
-          </form>
         </div>
       </div>
-    </div>
     </div>
   </main>
 

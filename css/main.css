@@ -769,7 +769,7 @@ main {
 .contacto {
   margin: 0; }
   .contacto .informacion {
-    background: url(/multimedia/fondo.png);
+    background: url(../multimedia/fondo2.png);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -778,14 +778,14 @@ main {
     background-size: cover;
     padding: 0; }
     .contacto .informacion .info {
-      margin: 80px 70px 80px auto;
+      margin: 80px auto 80px 70px;
       height: auto;
       width: 50%;
       padding: 0; }
       .contacto .informacion .info .formulario {
-        background-color: rgba(128, 128, 128, 0.301);
-        /* hsla(0, 0%, 100%, 0.205) */
-        height: 800px;
+        /* background-color: rgba(128, 128, 128, 0.301);  */
+        background-color: rgba(255, 209, 224, 0.199);
+        height: 700px;
         padding: 0;
         border-radius: 10px;
         border: 1px solid #fff;
@@ -794,106 +794,100 @@ main {
           margin: 15px 15px 0;
           padding: 0;
           height: 100%; }
-          .contacto .informacion .info .formulario .form .col {
-            margin: 0;
-            display: flex;
-            flex-flow: row nowrap; }
-          .contacto .informacion .info .formulario .form .cambio-form {
-            border-bottom: 1px solid #fff; }
-          .contacto .informacion .info .formulario .form input {
-            font-size: 15px;
-            font-weight: 600;
-            color: #FFD1E0;
-            margin: 30px auto;
-            height: 35px;
-            border: none;
-            outline: 0;
-            width: 40%;
-            border-radius: 5px;
-            background-color: transparent; }
-            .contacto .informacion .info .formulario .form input:focus {
-              border: 1px solid #e2e9f1; }
-            .contacto .informacion .info .formulario .form input::placeholder {
-              color: #fff;
-              font-weight: 600; }
-          .contacto .informacion .info .formulario .form textarea {
-            font-weight: 600;
-            outline: 0;
-            margin: 30px 45px;
+          .contacto .informacion .info .formulario .form .info-form {
+            margin: 15px 0; }
+            .contacto .informacion .info .formulario .form .info-form .cambio-form {
+              font-size: 15px;
+              font-weight: 600;
+              color: #000;
+              margin: 0;
+              height: 30px;
+              border: none;
+              outline: 0;
+              width: 95%;
+              background-color: transparent;
+              border-bottom: 1px solid #fff; }
+              .contacto .informacion .info .formulario .form .info-form .cambio-form:focus {
+                border: 1px solid #FFD1E0; }
+              .contacto .informacion .info .formulario .form .info-form .cambio-form::placeholder {
+                color: #fff;
+                font-weight: 600; }
+          .contacto .informacion .info .formulario .form .foot {
             width: 100%;
-            height: 150px;
-            border-radius: 5px;
-            border: none;
-            background-color: transparent;
-            color: #FFD1E0; }
-            .contacto .informacion .info .formulario .form textarea:focus {
-              border: 1px solid #e2e9f1; }
-            .contacto .informacion .info .formulario .form textarea::placeholder {
+            margin: 30px 0; }
+            .contacto .informacion .info .formulario .form .foot textarea {
+              font-weight: 600;
+              outline: 0;
+              width: 90%;
+              height: 180px;
+              border: none;
+              border-bottom: 1px solid #fff;
+              background-color: transparent;
+              color: #000;
+              margin: 0 30px; }
+              .contacto .informacion .info .formulario .form .foot textarea:focus {
+                border: 1px solid #FFD1E0; }
+              .contacto .informacion .info .formulario .form .foot textarea::placeholder {
+                color: #fff;
+                font-weight: 600; }
+          .contacto .informacion .info .formulario .form .seleccion {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around; }
+            .contacto .informacion .info .formulario .form .seleccion h3 {
+              font-size: 20px;
               color: #fff;
-              font-weight: 600; }
-          .contacto .informacion .info .formulario .form div {
+              font-weight: 600;
+              text-align: center;
+              padding: 5px;
+              margin-bottom: 20px; }
+            .contacto .informacion .info .formulario .form .seleccion div {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin: 0 180px; }
+              .contacto .informacion .info .formulario .form .seleccion div label {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+                text-align: center; }
+              .contacto .informacion .info .formulario .form .seleccion div input {
+                margin: 7px 0 0 0;
+                font-size: 15px;
+                border-radius: 5px;
+                height: 15px;
+                border: none;
+                outline: 0;
+                width: 10%; }
+                .contacto .informacion .info .formulario .form .seleccion div input:focus {
+                  color: #FFD1E0; }
+          .contacto .informacion .info .formulario .form .btn-enviar {
             display: flex;
             flex-flow: row nowrap;
             justify-content: center; }
-            .contacto .informacion .info .formulario .form div button {
+            .contacto .informacion .info .formulario .form .btn-enviar button {
               padding: 5px;
               border: transparent;
               background: #FFD1E0;
               color: #fff;
               width: 20%;
-              margin: 30px auto;
+              height: 35px;
+              margin: 40px auto 0;
               font-size: 15px;
+              font-weight: 600;
               border-radius: 150px;
-              box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-              margin: 2rem; }
-              .contacto .informacion .info .formulario .form div button:hover {
+              box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5); }
+              .contacto .informacion .info .formulario .form .btn-enviar button:hover {
                 background: #e2e9f1; }
-          .contacto .informacion .info .formulario .form .foot {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            width: 100%;
-            margin-top: 35px; }
-            .contacto .informacion .info .formulario .form .foot .seleccion {
-              display: flex;
-              flex-flow: column nowrap; }
-              .contacto .informacion .info .formulario .form .foot .seleccion h3 {
-                font-size: 18px;
-                color: #fff;
-                font-weight: 600;
-                text-align: center;
-                padding: 5px;
-                margin: 10px; }
-              .contacto .informacion .info .formulario .form .foot .seleccion div {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 0 45px; }
-                .contacto .informacion .info .formulario .form .foot .seleccion div label {
-                  font-size: 18px;
-                  color: #fff;
-                  font-weight: 600;
-                  text-align: center; }
-                .contacto .informacion .info .formulario .form .foot .seleccion div input {
-                  margin: 5px 0 0 0;
-                  font-size: 15px;
-                  border-radius: 5px;
-                  height: 15px;
-                  border: none;
-                  outline: 0;
-                  width: 10%; }
-                  .contacto .informacion .info .formulario .form .foot .seleccion div input:focus {
-                    color: #FFD1E0; }
-            .contacto .informacion .info .formulario .form .foot .logo-marca {
-              width: 30%;
-              height: 100px;
-              overflow: hidden;
-              margin: 80px 0 0 60px; }
-              .contacto .informacion .info .formulario .form .foot .logo-marca img {
-                width: 100%;
-                object-fit: cover;
-                height: 100%; }
 
+/*  Dispositivos medianos (tabletas, 768 px y más) */
+/* @media screen and (max-width: 991px) {
+  .contacto .informacion .info .formulario .form .foot {
+    .seleccion {
+      
+    }
+  }
+}  */
 /* .titulos {
   display: table;
 
