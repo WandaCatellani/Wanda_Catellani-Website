@@ -255,43 +255,40 @@
 }
 
 @mixin boton {
-  margin-top: 50px;
   padding: 5px;
   border: transparent;
   background: $color-pri;
-  color: #000;
-  width: 30%;
-  margin-left: 80px;
-  font-size: $tam-2;
+  color: #fff;
+  width: 20%;
+  margin: 30px auto;
+  font-size: $tam-1;
   border-radius: 150px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 @mixin input {
   font-size: $tam-1;
-  font-weight: 400;
-  margin: 15px auto;
-  padding: 5px;
+  font-weight: 600;
+  color: $color-pri;
+  margin: 30px auto;
+  height: 35px;
   border: none;
   outline: 0;
-  width: 60%;
+  width: 40%;
   border-radius: 5px;
   background-color: transparent;
 }
 
 @mixin textarea {
-  width: 100%;
-  padding: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   outline: 0;
-  margin: 15px auto;
-  max-width: 60%;
-  min-width: 50%;
-  min-height: 150px;
-  max-height: 300px;
+  margin: 30px 45px;
+  width: 100%;
+  height: 150px;
   border-radius: 5px;
   border: none;
   background-color: transparent;
+  color: $color-pri;
 }
 
 @mixin p {

@@ -98,50 +98,73 @@
           <div class="col-12 formulario">
 
             <form class="form" action="formulario" method="">
-              <label for="nombre"><span class="text-muted"></span></label>
-              <input type="text" name="nombre" id="name" placeholder="Nombre" class="cambio-form">
 
-              <label for="apellido"></label><span class="text-muted"></span></label>
-              <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="cambio-form">
+              <div class="col-12 col">
+                <label for="nombre"><span class="text-muted"></span></label>
+                <input type="text" name="nombre" id="name" placeholder="Nombre (*)" class="cambio-form">
 
-              <label for="movil"><span class="text-muted"></span></label>
-              <input type="text" name="numero" id="placeholder" placeholder="Móvil" class="cambio-form">
+                <label for="apellido"></label><span class="text-muted"></span></label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido (*)" class="cambio-form">
 
-              <label for="email"><span class="text-muted"></span></label>
-              <input type="text" name="email" id="email" placeholder="E-Mail" class="cambio-form">
-<!-- 
-              <div class="seleccion">
-              <label for="producto1">Tortas</label><br>
-              <input type="radio" id="producto1" name="producto1" value="Tortas"></input>
-
-              <label for="producto2">Postres</label><br>
-              <input type="radio" id="producto2" name="producto2" value="Postres"></input>
-
-              <label for="producto3">Tartas</label><br>
-              <input type="radio" id="producto3" name="producto3" value="Tartas"></input>
-
-              <label for="producto4">Exisiteces</label><br>
-              <input type="radio" id="producto4" name="producto4" value="Exisiteces"></input>
-
-              <label for="producto5">Individuales</label><br>
-              <input type="radio" id="producto5" name="producto5" value="Individuales"></input>
-              </input>
-              </div> -->
-
-              <textarea name="message" class="cambio-form" placeholder="Ingresa aqui tu mensaje"></textarea>
-
-              <div>
-                <button type="button" value="Enviar" onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
               </div>
 
-              <div class="logo-marca">
-                <img src="multimedia/logo.png" alt="logo marca">
-              </div>
-            </form>
+              <div class="col-12 col">
+                <label for="movil"><span class="text-muted"></span></label>
+                <input type="text" name="numero" id="placeholder" placeholder="Móvil (*)" class="cambio-form">
 
+                <label for="email"><span class="text-muted"></span></label>
+                <input type="text" name="email" id="email" placeholder="E-Mail (*)" class="cambio-form">
+              </div>
+
+              <div class="col-12">
+                <textarea name="message" class="cambio-form" placeholder="Ingresa aqui tu mensaje"></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="button" value="Enviar"
+                  onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
+              </div>
+
+              <div class="foot">
+                <div class="col-12 col-md-6 col-lg-6 seleccion">
+                  <h3>Motivo de contacto:</h3>
+
+                  <div>
+                    <label for="producto1">Tortas</label><br>
+                    <input type="radio" id="producto1" name="producto1" value="Tortas"></input>
+                  </div>
+
+                  <div>
+                    <label for="producto2">Postres</label><br>
+                    <input type="radio" id="producto2" name="producto2" value="Postres"></input>
+                  </div>
+
+                  <div>
+                    <label for="producto3">Tartas</label><br>
+                    <input type="radio" id="producto3" name="producto3" value="Tartas"></input>
+                  </div>
+
+                  <div>
+                    <label for="producto4">Exisiteces</label><br>
+                    <input type="radio" id="producto4" name="producto4" value="Exisiteces"></input>
+                  </div>
+
+                  <div>
+                    <label for="producto5">Individuales</label><br>
+                    <input type="radio" id="producto5" name="producto5" value="Individuales"></input>
+                    </input>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-6 logo-marca">
+                  <img src="multimedia/logo.png" alt="logo marca">
+                </div>
+              </div>
           </div>
+          </form>
         </div>
       </div>
+    </div>
     </div>
   </main>
 

@@ -778,82 +778,121 @@ main {
     background-size: cover;
     padding: 0; }
     .contacto .informacion .info {
-      margin: 40px;
-      width: 40%;
-      height: auto; }
+      margin: 80px 70px 80px auto;
+      height: auto;
+      width: 50%;
+      padding: 0; }
       .contacto .informacion .info .formulario {
-        background-color: rgba(255, 255, 255, 0.205);
-        height: 700px;
+        background-color: rgba(128, 128, 128, 0.301);
+        /* hsla(0, 0%, 100%, 0.205) */
+        height: 800px;
         padding: 0;
         border-radius: 10px;
-        display: block;
-        border: 1px solid #fff; }
+        border: 1px solid #fff;
+        display: block; }
         .contacto .informacion .info .formulario .form {
           margin: 15px 15px 0;
+          padding: 0;
           height: 100%; }
+          .contacto .informacion .info .formulario .form .col {
+            margin: 0;
+            display: flex;
+            flex-flow: row nowrap; }
           .contacto .informacion .info .formulario .form .cambio-form {
             border-bottom: 1px solid #fff; }
           .contacto .informacion .info .formulario .form input {
             font-size: 15px;
-            font-weight: 400;
-            margin: 15px auto;
-            padding: 5px;
+            font-weight: 600;
+            color: #FFD1E0;
+            margin: 30px auto;
+            height: 35px;
             border: none;
             outline: 0;
-            width: 60%;
+            width: 40%;
             border-radius: 5px;
             background-color: transparent; }
             .contacto .informacion .info .formulario .form input:focus {
               border: 1px solid #e2e9f1; }
             .contacto .informacion .info .formulario .form input::placeholder {
-              color: #fff; }
-          .contacto .informacion .info .formulario .form .seleccion {
-            display: block; }
+              color: #fff;
+              font-weight: 600; }
           .contacto .informacion .info .formulario .form textarea {
-            width: 100%;
-            padding: 1rem;
-            font-weight: 400;
+            font-weight: 600;
             outline: 0;
-            margin: 15px auto;
-            max-width: 60%;
-            min-width: 50%;
-            min-height: 150px;
-            max-height: 300px;
+            margin: 30px 45px;
+            width: 100%;
+            height: 150px;
             border-radius: 5px;
             border: none;
-            background-color: transparent; }
+            background-color: transparent;
+            color: #FFD1E0; }
             .contacto .informacion .info .formulario .form textarea:focus {
               border: 1px solid #e2e9f1; }
             .contacto .informacion .info .formulario .form textarea::placeholder {
-              color: #fff; }
+              color: #fff;
+              font-weight: 600; }
           .contacto .informacion .info .formulario .form div {
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-evenly; }
+            justify-content: center; }
             .contacto .informacion .info .formulario .form div button {
-              margin-top: 50px;
               padding: 5px;
               border: transparent;
               background: #FFD1E0;
-              color: #000;
-              width: 30%;
-              margin-left: 80px;
-              font-size: 20px;
+              color: #fff;
+              width: 20%;
+              margin: 30px auto;
+              font-size: 15px;
               border-radius: 150px;
               box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
               margin: 2rem; }
               .contacto .informacion .info .formulario .form div button:hover {
                 background: #e2e9f1; }
-        .contacto .informacion .info .formulario .logo-marca {
-          width: 30%;
-          height: 170px;
-          overflow: hidden;
-          display: block;
-          margin: auto; }
-          .contacto .informacion .info .formulario .logo-marca img {
+          .contacto .informacion .info .formulario .form .foot {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
             width: 100%;
-            object-fit: cover;
-            height: 100%; }
+            margin-top: 35px; }
+            .contacto .informacion .info .formulario .form .foot .seleccion {
+              display: flex;
+              flex-flow: column nowrap; }
+              .contacto .informacion .info .formulario .form .foot .seleccion h3 {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+                text-align: center;
+                padding: 5px;
+                margin: 10px; }
+              .contacto .informacion .info .formulario .form .foot .seleccion div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 45px; }
+                .contacto .informacion .info .formulario .form .foot .seleccion div label {
+                  font-size: 18px;
+                  color: #fff;
+                  font-weight: 600;
+                  text-align: center; }
+                .contacto .informacion .info .formulario .form .foot .seleccion div input {
+                  margin: 5px 0 0 0;
+                  font-size: 15px;
+                  border-radius: 5px;
+                  height: 15px;
+                  border: none;
+                  outline: 0;
+                  width: 10%; }
+                  .contacto .informacion .info .formulario .form .foot .seleccion div input:focus {
+                    color: #FFD1E0; }
+            .contacto .informacion .info .formulario .form .foot .logo-marca {
+              width: 30%;
+              height: 100px;
+              overflow: hidden;
+              margin: 80px 0 0 60px; }
+              .contacto .informacion .info .formulario .form .foot .logo-marca img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%; }
 
 /* .titulos {
   display: table;
