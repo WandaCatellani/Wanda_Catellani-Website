@@ -1036,7 +1036,7 @@ main {
   margin: 0;
 
   .informacion {
-    background:  url(../multimedia/fondo2.png);
+    background: url(../multimedia/fondo2.png);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -1044,7 +1044,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    
+
     .info {
       margin: 80px auto 80px 70px;
       height: auto;
@@ -1052,7 +1052,6 @@ main {
       padding: 0;
 
       .formulario {
-        /* background-color: rgba(128, 128, 128, 0.301);  */
         background-color: hsla(340, 100%, 91%, 0.199);
         height: 700px;
         padding: 0;
@@ -1164,13 +1163,80 @@ main {
 }
 
 /*  Dispositivos medianos (tabletas, 768 px y más) */
-/* @media screen and (max-width: 991px) {
-  .contacto .informacion .info .formulario .form .foot {
-    .seleccion {
-      
+@media screen and (max-width: 991px) {
+  .contacto .informacion {
+    background-size: 100% 100%;
+
+    .info .formulario .form {
+      .foot textarea {
+        margin: 0 30px 0 20px;
+      }
+
+      .seleccion div {
+        margin: 0 60px;
+      }
     }
   }
-}  */
+}
+
+/* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
+@media screen and (max-width: 767px) {
+  .contacto .informacion .info .formulario .form {
+    .foot textarea {
+      margin: 0 30px 0 15px;
+      height: 120px;
+    }
+
+    .seleccion {
+      h3 {
+        font-size: $tam-1;
+      }
+
+      div label {
+        font-size: $tam-1;
+      }
+    }
+
+    .btn-enviar button {
+      margin: 30px auto 0;
+      width: 30%;
+    }
+  }
+}
+
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  .contacto .informacion .info .formulario .form {
+    .info-form .cambio-form {
+      font-size: 14px;
+    }
+
+    .foot textarea {
+      margin: 0;
+      width: 100%;
+    }
+
+    .seleccion {
+      h3 {
+        font-size: 14px;
+        padding: 0;
+      }
+
+      div {
+        margin: 0 10px;
+
+      label {
+        font-size: 14px;
+      }
+    }
+    }
+
+    .btn-enviar button {
+      width: 55%;
+      font-size: 14px;
+    }
+  }
+}
 //
 //
 //       MAIN  COMO COMPRAR
