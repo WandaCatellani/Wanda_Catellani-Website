@@ -204,6 +204,7 @@
   font-size: $tam-3;
   text-align: center;
   margin: 20px 0;
+  padding: 0;
 }
 
 @mixin redes {
@@ -246,19 +247,11 @@
   transition: all 0.3s linear;
 }
 
-@mixin title-contacto {
-  line-height: 1.2em;
-  font-weight: normal;
-  color: #000;
-  margin: 0;
-  font-size: 33px;
-}
-
 @mixin boton {
   padding: 5px;
   border: transparent;
   background: $color-pri;
-  color: #fff;
+  color: #000;
   width: 20%;
   height: 35px;
   margin: 40px auto 0;
@@ -306,28 +299,13 @@
   margin-bottom: 25px;
 }
 
-@mixin h4 {
-  font-size: $tam-1;
-  color: #fff;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-@mixin h5 {
-  font-size: $tam-3;
-  color: $color-sec;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-@mixin destacado {
-  color: $color-pri;
-  font-weight: 400;
+@mixin title-faq {
+  line-height: 1.2em;
+  font-weight: normal;
+  color: #000;
+  margin: 0;
+  font-size: 33px;
   text-align: center;
-  padding: 10px;
-  padding-top: 100px;
-  font-size: $tam-5;
-  margin: 10px;
-  margin-bottom: 10px;
-  font-style: italic;
-  text-transform: uppercase;
+  padding: 10px 0;
+  font-family: 'Roboto Slab', serif;
 }

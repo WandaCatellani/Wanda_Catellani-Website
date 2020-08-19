@@ -269,7 +269,8 @@ main {
         main .home .row .left .centrar-img {
           position: relative;
           overflow: hidden;
-          height: 644px; }
+          height: 644px;
+          display: block; }
           main .home .row .left .centrar-img img {
             position: absolute;
             width: 100%;
@@ -547,7 +548,8 @@ main {
     display: flex;
     width: 80%;
     justify-content: space-evenly;
-    margin: 10px auto; }
+    margin: 10px auto;
+    padding: 0; }
     .footer .informacion .infor {
       display: flex;
       flex-direction: column;
@@ -587,7 +589,8 @@ main {
     justify-content: center;
     font-size: 25px;
     text-align: center;
-    margin: 20px 0; }
+    margin: 20px 0;
+    padding: 0; }
     .footer .iconos .f {
       color: #fff;
       padding: 10px;
@@ -616,7 +619,8 @@ main {
         transition: all 0.3s linear;
         color: rgba(248, 68, 122, 0.705); }
   .footer .copy {
-    margin: 30px 0 10px; }
+    margin: 30px 0 10px;
+    padding: 0; }
     .footer .copy h6 {
       font-size: 13px;
       color: #fff;
@@ -639,6 +643,11 @@ main {
       margin: 20px 0; }
     .footer .informacion .iconos {
       margin: 20px 0; } }
+
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  .footer .copy {
+    padding: 0 25px; } }
 
 .tienda {
   margin-bottom: 25px; }
@@ -738,8 +747,7 @@ main {
             font-weight: 700;
             background-color: #000;
             padding: 0.5rem;
-            display: inline-block;
-            /* @include p(); */ }
+            display: inline-block; }
       .tienda .productos .articulos .foto:hover .hover {
         transform: scale(1); }
 
@@ -771,11 +779,10 @@ main {
   .contacto .informacion {
     background: url(../multimedia/fondo2.png);
     width: 100%;
-    height: 100%;
     overflow: hidden;
-    display: block;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 0; }
     .contacto .informacion .info {
       margin: 80px auto 80px 70px;
@@ -868,7 +875,7 @@ main {
               padding: 5px;
               border: transparent;
               background: #FFD1E0;
-              color: #fff;
+              color: #000;
               width: 20%;
               height: 35px;
               margin: 40px auto 0;
@@ -881,12 +888,10 @@ main {
 
 /*  Dispositivos medianos (tabletas, 768 px y más) */
 @media screen and (max-width: 991px) {
-  .contacto .informacion {
-    background-size: 100% 100%; }
-    .contacto .informacion .info .formulario .form .foot textarea {
-      margin: 0 30px 0 20px; }
-    .contacto .informacion .info .formulario .form .seleccion div {
-      margin: 0 60px; } }
+  .contacto .informacion .info .formulario .form .foot textarea {
+    margin: 0 30px 0 20px; }
+  .contacto .informacion .info .formulario .form .seleccion div {
+    margin: 0 60px; } }
 
 /* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
 @media screen and (max-width: 767px) {
@@ -919,101 +924,181 @@ main {
     width: 55%;
     font-size: 14px; } }
 
-/* .titulos {
-  display: table;
+.corporativo {
+  margin: 0; }
+  .corporativo .bg-empresas {
+    background-image: url(../multimedia/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    padding: 0; }
+    .corporativo .bg-empresas .contenidos {
+      padding-bottom: 25px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro {
+        margin-top: 200px;
+        margin-bottom: 20px;
+        padding: 45px 90px;
+        background: rgba(0, 0, 0, 0.452); }
+        .corporativo .bg-empresas .contenidos .bloque-negro h1 {
+          font-weight: 500;
+          font-size: 24px;
+          color: #c9f5d1;
+          margin-bottom: 25px; }
+        .corporativo .bg-empresas .contenidos .bloque-negro p {
+          color: #fff;
+          font-weight: 700;
+          font-size: 17px;
+          text-transform: uppercase; }
+        .corporativo .bg-empresas .contenidos .bloque-negro a {
+          font-size: 15px;
+          margin-top: 30px;
+          width: 170px;
+          height: 38px;
+          text-decoration: none;
+          background-color: #e2e9f1;
+          font-weight: 700;
+          line-height: 38px;
+          text-align: center;
+          display: inline-block;
+          color: #000; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo {
+        margin-bottom: 15px;
+        padding: 45px 90px;
+        background: rgba(0, 0, 0, 0.452); }
+        .corporativo .bg-empresas .contenidos .bloque-negroo h1 {
+          font-weight: 500;
+          font-size: 24px;
+          color: #FFD1E0;
+          margin-bottom: 25px; }
+        .corporativo .bg-empresas .contenidos .bloque-negroo p {
+          color: #fff;
+          font-weight: 700;
+          font-size: 17px;
+          text-transform: uppercase; }
+        .corporativo .bg-empresas .contenidos .bloque-negroo a {
+          font-size: 15px;
+          margin-top: 30px;
+          width: 170px;
+          height: 38px;
+          text-decoration: none;
+          background-color: #FFD1E0;
+          font-weight: 700;
+          line-height: 38px;
+          text-align: center;
+          display: inline-block;
+          color: #000; }
 
-  & .row {
-    padding: 90px 60px;
-    margin: 10px auto;
-  }
+/*  Dispositivos medianos (tabletas, 768 px y más) */
+@media (max-width: 991px) {
+  .corporativo .bg-empresas .contenidos {
+    width: 90%; }
+    .corporativo .bg-empresas .contenidos .bloque-negro {
+      padding: 35px 60px;
+      margin-top: 135px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro h1 {
+        font-size: 20px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro p {
+        font-size: 14px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro a {
+        margin-top: 20px;
+        width: 140px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px; }
+    .corporativo .bg-empresas .contenidos .bloque-negroo {
+      padding: 35px 60px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo h1 {
+        font-size: 20px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo p {
+        font-size: 14px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo a {
+        margin-top: 20px;
+        width: 140px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px; } }
 
-  & .pagos {
-    display: block;
-  }
+/* Dispositivos pequeños (teléfonos horizontales, 576 px y más) */
+@media screen and (max-width: 767px) {
+  .corporativo .bg-empresas .contenidos {
+    margin-top: 90px;
+    padding-bottom: 0; }
+    .corporativo .bg-empresas .contenidos .bloque-negro {
+      position: relative;
+      margin-bottom: 30px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro h1 {
+        font-size: 18px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro p {
+        font-size: 13px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px; }
+    .corporativo .bg-empresas .contenidos .bloque-negroo {
+      position: relative;
+      margin-bottom: 60px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo h1 {
+        font-size: 18px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo p {
+        font-size: 13px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px; } }
 
-  & .datos {
-    display: block;
-  }
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  .corporativo .bg-empresas .contenidos {
+    margin-top: 80px; }
+    .corporativo .bg-empresas .contenidos .bloque-negro {
+      padding: 20px 35px 60px 35px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro h1 {
+        font-size: 15px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro p {
+        font-size: 12px; }
+      .corporativo .bg-empresas .contenidos .bloque-negro a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px; }
+    .corporativo .bg-empresas .contenidos .bloque-negroo {
+      padding: 20px 35px 60px 35px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo h1 {
+        font-size: 15px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo p {
+        font-size: 12px; }
+      .corporativo .bg-empresas .contenidos .bloque-negroo a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px; } }
 
-  & h5 {
-    @include h5();
-    text-transform: uppercase;
-  }
+.faq {
+  margin-bottom: 25px; }
+  .faq .titulo {
+    background-color: #FFD1E0;
+    padding: 10px 15px;
+    margin-bottom: 25px; }
+    .faq .titulo h1 {
+      line-height: 1.2em;
+      font-weight: normal;
+      color: #000;
+      margin: 0;
+      font-size: 33px;
+      text-align: center;
+      padding: 10px 0;
+      font-family: 'Roboto Slab', serif; }
+  .faq .preg-resp h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 500; }
+  .faq .preg-resp p {
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-align: justify; }
 
-  & p {
-    @include h3orden();
-    padding: 0;
-    margin: 0;
-  }
-
-  & span {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 4px;
-    width: 20%;
-    color: $color-negro;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  & img {
-    width: 10%;
-  }
-} */
-/* .comprar {
-  margin-bottom: 5rem;
-
-  h1 {
-    @include h1();
-  }
-
-  h3 {
-    @include h3orden();
-    font-size: $tam-2;
-  }
-
-  .imag {
-    width: 90%;
-    overflow: hidden;
-
-    .image {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-    }
-  }
-
-  .texto {
-    display: flex;
-    flex-flow: row wrap;
-
-    .icon {
-      color: $color-pri;
-      width: 10%;
-
-      p {
-        font-size: $tam-1;
-        text-transform: uppercase;
-        text-align: justify;
-        margin-bottom: 0 !important;
-        font-weight: 400;
-        color: $color-negro;
-      }
-    }
-  }
-} */
-/* .faq {
-  margin-bottom: 5rem;
-
-  & h1 {
-    @include h1();
-  }
-
-  & .pregyresp h3 {
-    @include h3orden();
-    text-align: center;
-  }
-  & p {
-    @include p();
-  }
-} */
+/*  Dispositivos medianos (tabletas, 768 px y más) */
+@media (max-width: 991px) {
+  .faq .preg-resp {
+    padding: 0 60px; } }
