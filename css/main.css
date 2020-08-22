@@ -23,10 +23,6 @@
   border-radius: 999px;
   right: -8px; }
 
-#destac {
-  padding: 0;
-  margin: 0 !important; }
-
 html {
   font-size: 62.5%; }
 
@@ -784,7 +780,7 @@ main {
 .contacto {
   margin: 0; }
   .contacto .informacion {
-    background: url(../multimedia/fondo2.png);
+    background: url(https://image.freepik.com/foto-gratis/vista-superior-tarta-chocolate_23-2148019564.jpg);
     width: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
