@@ -1,0 +1,194 @@
+//       MAIN  CORPORATIVO
+.corporativo {
+  margin: 0;
+
+  .bg-empresas {
+    @include corporativo();
+
+    .contenidos {
+      padding-bottom: 25px;
+
+      .bloque-negro {
+        @include bloque-negro();
+
+        h1 {
+          @include bloque-negro-h1();
+        }
+
+        p {
+          @include bloque-negro-p();
+        }
+
+        a {
+          @include bloque-negro-a();
+        }
+      }
+
+      .bloque-negroo {
+        @include bloque-negro();
+        margin-bottom: 15px;
+        margin-top: 0;
+
+        h1 {
+          @include bloque-negro-h1();
+          color: $color-pri;
+        }
+
+        p {
+          @include bloque-negro-p();
+        }
+
+        a {
+          @include bloque-negro-a();
+          background-color: $color-pri;
+        }
+      }
+    }
+  }
+}
+//
+//
+//                   MEDIA QUERIES
+//
+//
+/*  Dispositivos medianos (tabletas, 768px y más) */
+@media (max-width: 991px) {
+  .corporativo .bg-empresas {
+    .contenidos {
+      width: 90%;
+
+      .bloque-negro {
+        padding: 35px 60px;
+        margin-top: 135px;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        a {
+          margin-top: 20px;
+          width: 140px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 13px;
+        }
+      }
+
+      .bloque-negroo {
+        padding: 35px 60px;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        a {
+          margin-top: 20px;
+          width: 140px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos pequeños (teléfonos horizontales, 480px y más) */
+@media screen and (max-width: 767px) {
+  .corporativo .bg-empresas .contenidos {
+    margin-top: 90px;
+    padding-bottom: 0;
+
+    .bloque-negro {
+      position: relative;
+      margin-bottom: 30px;
+      margin-top: 0px;
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px;
+      }
+    }
+
+    .bloque-negroo {
+      position: relative;
+      margin-bottom: 60px;
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px;
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  .corporativo .bg-empresas .contenidos {
+    margin-top: 80px;
+
+    .bloque-negro {
+      padding: 20px 35px 60px 35px;
+
+      h1 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px;
+      }
+    }
+
+    .bloque-negroo {
+      padding: 20px 35px 60px 35px;
+
+      h1 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      a {
+        margin-top: 20px;
+        position: absolute;
+        bottom: -10px;
+      }
+    }
+  }
+}

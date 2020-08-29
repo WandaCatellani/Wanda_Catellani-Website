@@ -35,7 +35,7 @@
 
           <div class="col-5 carrito">
             <a class="btn-carro">
-              <img src="multimedia/carro.svg" class="img-fluid" alt="">
+              <img src="imgs/carro.svg" class="img-fluid" alt="">
               <h3 id="cant">0</h3>
             </a>
           </div>
@@ -46,7 +46,7 @@
     <div class="container-fluid logo">
       <div class="container">
         <a href="index.html">
-          <img src="multimedia/logonegro.png" alt="">
+          <img src="imgs/logonegro.png" alt="">
         </a>
       </div>
     </div>
@@ -72,22 +72,22 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="tienda.html">TIENDA</a>
+                <a class="nav-link" href="wanda.html">WANDA</a>
                 <span> · </span>
               </li>
 
               <li class="nav-item">
+                <a class="nav-link" href="tienda.html">TIENDA</a>
+                <span> · </span>
+              </li>
+
+              <li class="nav-item active">
                 <a class="nav-link" href="contacto.html">CONTACTO</a>
                 <span> · </span>
               </li>
 
               <li class="nav-item">
                 <a class="nav-link" href="corporativo.html">CORPORATIVO</a>
-                <span> · </span>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="wanda.html">WANDA</a>
                 <span> · </span>
               </li>
 
@@ -102,93 +102,92 @@
   </header>
 
   <main class="contacto">
-    <div class="container-fluid informacion">
+    <div class="container-fluid info-contact">
+        <div class="container info">
+          <div class="row">
+            <div class="col-12 formulario">
 
-      <div class="container info">
-        <div class="row">
-          <div class="col-12 formulario">
+              <form class="form" action="formulario" method="">
 
-            <form class="form" action="formulario" method="">
-
-              <div class="row">
-                <div class="col-12 col-md-6 col-lg-6 info-form">
-                  <label for="nombre"><span class="text-muted"></span></label>
-                  <input type="text" name="nombre" id="name" placeholder="Nombre (*)" class="cambio-form">
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-6 info-form">
-                  <label for="apellido"></label><span class="text-muted"></span></label>
-                  <input type="text" name="apellido" id="apellido" placeholder="Apellido (*)" class="cambio-form">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12 col-md-6 col-lg-6 info-form">
-                  <label for="movil"><span class="text-muted"></span></label>
-                  <input type="text" name="numero" id="placeholder" placeholder="Móvil (*)" class="cambio-form">
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-6 info-form">
-                  <label for="email"><span class="text-muted"></span></label>
-                  <input type="text" name="email" id="email" placeholder="E-Mail (*)" class="cambio-form">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12 foot">
-                  <textarea name="message" placeholder="Ingresa aqui tu mensaje"></textarea>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12 datos-oblig">
-                  <h3>(*) DATOS OBLIGATORIOS</h3>
-                </div>
-              </div>
-
-
-              <div class="row">
-                <div class="col-12 seleccion">
-                  <h3>Motivo de contacto :</h3>
-
-                  <div>
-                    <label for="producto1">Tortas</label><br>
-                    <input type="radio" id="producto1" name="producto1" value="Tortas"></input>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-6 info-form">
+                    <label for="nombre"><span class="text-muted"></span></label>
+                    <input type="text" name="nombre" id="name" placeholder="Nombre (*)" class="cambio-form">
                   </div>
 
-                  <div>
-                    <label for="producto2">Postres</label><br>
-                    <input type="radio" id="producto2" name="producto2" value="Postres"></input>
-                  </div>
-
-                  <div>
-                    <label for="producto3">Tartas</label><br>
-                    <input type="radio" id="producto3" name="producto3" value="Tartas"></input>
-                  </div>
-
-                  <div>
-                    <label for="producto4">Exisiteces</label><br>
-                    <input type="radio" id="producto4" name="producto4" value="Exisiteces"></input>
-                  </div>
-
-                  <div>
-                    <label for="producto5">Individuales</label><br>
-                    <input type="radio" id="producto5" name="producto5" value="Individuales"></input>
-                    </input>
+                  <div class="col-12 col-md-6 col-lg-6 info-form">
+                    <label for="apellido"></label><span class="text-muted"></span></label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido (*)" class="cambio-form">
                   </div>
                 </div>
-              </div>
 
-              <div class="row">
-                <div class="col-12 btn-enviar">
-                  <button type="button" value="Enviar"
-                    onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-6 info-form">
+                    <label for="movil"><span class="text-muted"></span></label>
+                    <input type="text" name="numero" id="placeholder" placeholder="Móvil (*)" class="cambio-form">
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-6 info-form">
+                    <label for="email"><span class="text-muted"></span></label>
+                    <input type="text" name="email" id="email" placeholder="E-Mail (*)" class="cambio-form">
+                  </div>
                 </div>
-              </div>
-            </form>
+
+                <div class="row">
+                  <div class="col-12 foot">
+                    <textarea name="message" placeholder="Ingresa aqui tu mensaje"></textarea>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 datos-oblig">
+                    <h3>(*) DATOS OBLIGATORIOS</h3>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-12 seleccion">
+                    <h3>Motivo de contacto :</h3>
+
+                    <div>
+                      <label for="producto1">Tortas</label><br>
+                      <input type="radio" id="producto1" name="producto1" value="Tortas"></input>
+                    </div>
+
+                    <div>
+                      <label for="producto2">Postres</label><br>
+                      <input type="radio" id="producto2" name="producto2" value="Postres"></input>
+                    </div>
+
+                    <div>
+                      <label for="producto3">Tartas</label><br>
+                      <input type="radio" id="producto3" name="producto3" value="Tartas"></input>
+                    </div>
+
+                    <div>
+                      <label for="producto4">Exquisiteces</label><br>
+                      <input type="radio" id="producto4" name="producto4" value="Exquisiteces"></input>
+                    </div>
+
+                    <div>
+                      <label for="producto5">Individuales</label><br>
+                      <input type="radio" id="producto5" name="producto5" value="Individuales"></input>
+                      </input>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 btn-enviar">
+                    <button type="button" value="Enviar"
+                      onclick="alert('Muchas gracias por comunicarte, pronto nos pondremos en contacto')">Enviar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </main>
 
@@ -197,11 +196,11 @@
       <div class="col-12 informacion">
         <div class="infor">
           <ul>
-            <li><a href="inicio.html">INICIO</a></li>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="wanda.html">WANDA</a></li>
             <li><a href="tienda.html">TIENDA</a></li>
             <li><a href="contacto.html">CONTACTO</a></li>
             <li><a href="corporativo.html">CORPORATIVO</a></li>
-            <li><a href="wanda.html">WANDA</a></li>
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>

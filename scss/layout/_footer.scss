@@ -1,0 +1,209 @@
+.footer {
+  @include footer();
+
+  .informacion {
+    @include informacion();
+
+    .infor {
+      @include infor();
+
+      ul {
+        list-style: none;
+        margin: 0;
+        text-align: left;
+
+        li {
+          border-bottom: 0;
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            line-height: 2em;
+
+            &:hover {
+              color: $color-pri;
+            }
+          }
+        }
+      }
+    }
+
+    .pedido {
+      @include pedido();
+
+      .pedido-contenedor {
+        height: auto;
+        padding: 10px 80px;
+        border: 3px solid #c9f5d1;
+
+        h2 {
+          @include pedido-h2();
+        }
+
+        a {
+          @include pedido-a();
+
+          .whats {
+            color: $color-whats;
+            padding-top: 7px;
+            font-size: $tam-3;
+
+            &:hover {
+              transition: all 0.2s;
+              transform: scale(1.5);
+            }
+          }
+
+          p {
+            color: #fff;
+            font-size: $tam-1;
+            padding: 10px 0 0 10px;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .direction {
+      @include direction();
+
+      .dir {
+        color: $color-ubi;
+        padding: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      p {
+        color: #fff;
+        font-size: $tam-1;
+        margin: 10px;
+      }
+    }
+  }
+
+  hr {
+    margin: 0 60px;
+    visibility: visible;
+    border-bottom: 1px solid $color-pri;
+  }
+
+  .iconos {
+    @include iconos();
+
+    .f {
+      @include redes();
+      color: $color-facebook;
+
+      &:hover {
+        @include redeshover();
+      }
+    }
+
+    .t {
+      @include redes();
+      color: $color-twitter;
+
+      &:hover {
+        @include redeshover();
+      }
+    }
+
+    .i {
+      @include redes();
+      color: $color-instagram;
+
+      &:hover {
+        @include redeshover();
+      }
+    }
+  }
+
+  .copy {
+    margin: 30px 0 10px;
+    padding: 0;
+
+    h6 {
+      @include title-copy();
+    }
+  }
+}
+//
+//
+//                   MEDIA QUERIES
+//
+//
+/* Dispositivos pequeños (teléfonos horizontales, 480px y más) */
+@media screen and (max-width: 767px) {
+  .footer {
+    .informacion {
+      flex-direction: column;
+
+      .infor {
+        margin: 20px 0;
+
+        ul {
+          margin: 0 auto;
+          width: 50%;
+
+          li {
+            border-bottom: 1px solid $color-pri;
+            text-align: center;
+          }
+        }
+      }
+
+      .pedido {
+        margin: 20px 0;
+        height: auto;
+
+        .pedido-contenedor {
+          padding: 10px 20px;
+          width: 40%;
+          margin: 0 auto;
+        }
+      }
+
+      .direction {
+        margin: 20px 0;
+      }
+    }
+
+    .iconos {
+      margin: 20px 0;
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  .footer {
+    .informacion .pedido .pedido-contenedor {
+      padding: 10px;
+
+      h2 {
+        margin: 0;
+      }
+
+      a {
+        flex-direction: column;
+
+        .whats {
+          padding-top: 10px;
+        }
+
+        p {
+          padding: 5px 0 0 0;
+        }
+      }
+    }
+
+    .copy {
+      padding: 0 45px;
+    }
+  }
+}

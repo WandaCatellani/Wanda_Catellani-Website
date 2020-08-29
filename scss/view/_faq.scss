@@ -1,0 +1,64 @@
+//          MAIN  FAQ
+.faq {
+  margin-bottom: 25px;
+
+  .titulo-faq {
+    background-color: $color-pri;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+
+    h1 {
+      @include title-faq();
+    }
+  }
+
+  .preg-resp {
+    padding-bottom: 50px;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 30px;
+
+    .text-faq {
+      h3 {
+        font-family: "Roboto Slab", serif;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: $tam-1;
+        line-height: 1.5em;
+        font-weight: 400;
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+    }
+  }
+}
+//
+//
+//                   MEDIA QUERIES
+//
+//
+/*  Dispositivos medianos (tabletas, 768px y más) */
+@media (max-width: 991px) {
+  .faq .preg-resp {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .foto-faq {
+      padding-bottom: 40px;
+    }
+  }
+}
+//
+//
+/* Dispositivos pequeños (teléfonos horizontales, 480px y más) */
+@media screen and (max-width: 767px) {
+  .faq {
+    .titulo-faq h1 {
+      font-size: 28px;
+    }
+  }
+}

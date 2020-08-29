@@ -1,0 +1,427 @@
+main {
+  margin-bottom: 25px;
+  // Carousel
+  .imagenes {
+    /* background-color: $color-pri; */
+    height: 505px;
+    padding: 0;
+
+    .carousel-inner {
+      width: 100%;
+      height: 505px;
+      padding: 0 15px;
+      max-width: 992px;
+
+      .carousel-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    .carousel-indicators {
+      @include carousel-indic();
+
+      li {
+        @include carousel-indic-li();
+      }
+    }
+  }
+  // Home
+  .home {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .row {
+      margin: 0;
+
+      .izq {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        .centrar-img {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 644px;
+          /* background-size: cover; */
+
+          img {
+            position: absolute;
+          }
+        }
+
+        .txt {
+          @include txt();
+
+          .texto {
+            @include texto();
+
+            h1 {
+              @include texto-h1();
+            }
+
+            p {
+              @include texto-p();
+            }
+
+            a {
+              @include texto-a();
+            }
+          }
+        }
+      }
+
+      .der {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        .centrar-img {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 644px;
+          /*  background-size: cover; */
+
+          img {
+            position: absolute;
+          }
+        }
+
+        .txt {
+          @include txt();
+
+          .texto {
+            @include texto();
+            float: left;
+
+            h1 {
+              @include texto-h1();
+            }
+
+            p {
+              @include texto-p();
+            }
+
+            a {
+              @include texto-a();
+              background-color: $color-sec;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Destacados
+  .destacados {
+    hr {
+      visibility: hidden;
+    }
+
+    h2 {
+      @include title-destac();
+    }
+
+    .prod-cont {
+      .product {
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+          transition: all 1s linear;
+          transform: scale(1.1);
+        }
+
+        h3 {
+          @include destac-h3();
+        }
+
+        p {
+          @include destac-p();
+        }
+      }
+    }
+  }
+}
+//
+//
+//                   MEDIA QUERIES
+//
+//
+/*  Dispositivos medianos (tabletas, 768px y más) */
+@media screen and (max-width: 991px) {
+  main {
+    .imagenes {
+      height: 575px;
+      display: inline-block;
+      width: 100%;
+
+      .carousel-inner {
+        height: 575px;
+        padding: 0;
+      }
+    }
+
+    .home {
+      height: auto;
+
+      .row {
+        height: auto;
+
+        .izq {
+          .centrar-img {
+            height: 390px;
+            max-height: 496px;
+            min-height: 440px;
+
+            img {
+              min-height: 300px;
+              max-height: 496px;
+            }
+          }
+
+          .txt {
+            top: 0px;
+            position: relative;
+            height: 200px;
+            background-image: none;
+            background-color: #fff;
+
+            .texto {
+              width: 100%;
+              height: 100%;
+              padding: 45px 75px;
+
+              a {
+                position: absolute;
+                bottom: 45px;
+                left: 75px;
+                right: inherit;
+              }
+            }
+          }
+        }
+
+        .der {
+          .centrar-img {
+            height: 390px;
+            max-height: 496px;
+            min-height: 440px;
+
+            img {
+              min-height: 300px;
+              max-height: 496px;
+            }
+          }
+
+          .txt {
+            top: 0px;
+            position: relative;
+            height: 200px;
+            background-image: none;
+            background-color: #fff;
+
+            .texto {
+              width: 100%;
+              height: 100%;
+              padding: 45px 75px;
+
+              a {
+                position: absolute;
+                bottom: 45px;
+                left: 75px;
+                right: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .destacados {
+      hr {
+        border-top: 1px solid #808080;
+        padding: 0 40px; // le saque el margin
+        visibility: visible;
+      }
+
+      h2 {
+        font-size: $tam-5;
+      }
+
+      .prod-cont {
+        max-width: 710px;
+        margin: auto;
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos pequeños (teléfonos horizontales, 480px y más) */
+@media screen and (max-width: 767px) {
+  main {
+    .imagenes {
+      height: 385px;
+
+      .carousel-inner {
+        height: 385px;
+      }
+    }
+
+    .home .row {
+      .izq {
+        .centrar-img {
+          height: 322px;
+        }
+
+        .txt {
+          height: 100px;
+
+          .texto {
+            width: 100%;
+            height: 100%;
+            padding: 23px;
+
+            h1 {
+              font-size: 15px;
+            }
+
+            p {
+              font-size: 12px;
+              width: 60%;
+            }
+
+            a {
+              bottom: inherit;
+              top: 35px;
+              left: inherit;
+              right: 35px;
+            }
+          }
+        }
+      }
+
+      .der {
+        .centrar-img {
+          height: 322px;
+        }
+
+        .txt {
+          height: 100px;
+
+          .texto {
+            width: 100%;
+            height: 100%;
+            padding: 23px;
+
+            h1 {
+              font-size: 15px;
+            }
+
+            p {
+              font-size: 12px;
+              width: 60%;
+            }
+
+            a {
+              bottom: inherit;
+              top: 35px;
+              left: inherit;
+              right: 35px;
+            }
+          }
+        }
+      }
+    }
+
+    .destacados {
+      hr {
+        margin: 0 auto;
+        visibility: visible;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      .prod-cont {
+        max-width: 480px;
+        margin: auto;
+
+        .product {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  main {
+    .imagenes {
+      height: 280px;
+
+      .carousel-inner {
+        height: 290px;
+      }
+    }
+
+    .home .row {
+      .izq .txt .texto {
+        padding: 20px;
+
+        a {
+          width: 100px;
+          right: 20px;
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 14px;
+        }
+      }
+
+      .der .txt .texto {
+        padding: 20px;
+
+        a {
+          width: 100px;
+          right: 20px;
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .destacados {
+      h2 {
+        font-size: 18px;
+        margin: 25px auto;
+      }
+
+      .prod-cont {
+        max-width: 320px;
+      }
+    }
+  }
+}

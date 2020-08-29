@@ -1,0 +1,286 @@
+#cant {
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+  background-color: $color-pri;
+  padding: 5px;
+  bottom: -11px;
+  border-radius: 999px;
+  right: -8px;
+}
+
+header {
+  @include header();
+
+  .top-negro {
+    @include top();
+
+    .tel a {
+      @include top-a();
+
+      .whats {
+        color: $color-whats;
+        margin-right: 10px;
+
+        &:hover {
+          transition: all 0.2s;
+          transform: scale(1.5);
+        }
+      }
+
+      span {
+        @include top-span();
+      }
+    }
+
+    .carrito {
+      .btn-carro {
+        @include btn-carro();
+
+        a {
+          text-decoration: none;
+          color: $color-pri;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    @include logo();
+
+    .container {
+      height: 180px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      text-align: center;
+      margin: auto;
+      z-index: 3;
+
+      a {
+        display: block;
+        margin: auto;
+
+        img {
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    @include nav();
+
+    .btn-nav {
+      @include btn-nav();
+
+      &:hover {
+        border-color: $color-pri;
+      }
+    }
+
+    .menu-desplegable {
+      margin: auto;
+      padding-left: 0;
+      width: 100%;
+      list-style: none;
+      display: block;
+
+      & li {
+        list-style: none;
+        display: inline-block;
+
+        & a {
+          text-decoration: none;
+          display: inline-block;
+          line-height: 40px;
+          font-weight: 600;
+          font-size: $tam-1;
+          color: #000;
+          margin: 0 1rem;
+          /* transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.5s ease-in-out;  */
+          
+
+          &:hover {
+            color: $color-pri;
+            /* transform: scaleX(1); */
+          }
+        }
+
+        span {
+          color: $color-negro;
+          font-size: $tam-1;
+          font-weight: 600;
+          line-height: 40px;
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}
+//
+//
+//                   MEDIA QUERIES
+//
+//
+/*  Dispositivos medianos (tabletas, 768px y más) */
+@media screen and (max-width: 991px) {
+  header {
+    .logo {
+      position: relative;
+      margin-top: 0;
+      height: 160px;
+
+      .container {
+        height: 160px;
+
+        a img {
+          height: 150px;
+        }
+      }
+    }
+
+    .menu {
+      padding: 0;
+
+      .container {
+        padding: 0;
+
+        .navbar {
+          padding: 0;
+
+          .menu-desplegable li span {
+            margin: 0 13px;
+          }
+        }
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos pequeños (teléfonos horizontales, 480px y más) */
+@media screen and (max-width: 767px) {
+  header {
+    .top-negro {
+      height: 30px;
+
+      .tel a {
+        font-size: 15px;
+        line-height: 30px;
+
+        span {
+          display: none;
+        }
+      }
+
+      .carrito .btn-carro {
+        width: 38px;
+        height: 30px;
+        padding: 4px 8px;
+
+        img {
+          width: 22px;
+        }
+      }
+    }
+
+    .logo {
+      height: 140px;
+
+      .container {
+        height: 140px;
+
+        a img {
+          height: 140px;
+        }
+      }
+    }
+
+    .menu {
+      height: 40px;
+      padding: 0;
+
+      .container {
+        padding: 0;
+        height: 40px;
+
+        .navbar {
+          padding: 0;
+
+          .btn-nav {
+            padding: 0 0 0 15px;
+          }
+
+          .menu-desplegable {
+            li {
+              display: block;
+              border-bottom: 1px solid $color-pri;
+              background-color: $color-negro;
+
+              a {
+                text-align: center;
+                line-height: 42px;
+                font-size: $tam-1;
+                color: #fff;
+                padding: 0;
+                margin: 0;
+              }
+
+              span {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 479px) */
+@media screen and (max-width: 479px) {
+  header {
+    .top-negro .container {
+      height: 30px;
+
+      .tel {
+        padding-left: 10px;
+      }
+    }
+    .carrito .btn-carro {
+      margin-right: 7px;
+    }
+
+    .logo {
+      height: 120px;
+
+      .container {
+        height: 120px;
+
+        a img {
+          height: 120px;
+        }
+      }
+    }
+
+    .menu .container .navbar .menu-desplegable li {
+      a {
+        line-height: 36px;
+        font-size: 13px;
+        padding: 0px 15px;
+      }
+    }
+  }
+}

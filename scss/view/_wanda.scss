@@ -1,0 +1,235 @@
+//          MAIN  WANDA
+.wanda {
+  .img-wanda {
+    @include img-wan();
+
+    .top-img {
+      height: 100%;
+      width: 100%;
+
+      .frase {
+        @include frase();
+
+        p {
+          @include frase-p();
+        }
+      }
+    }
+  }
+
+  .nombre {
+    padding: 60px 50px 30px;
+
+    h1 {
+      @include title-wanda();
+    }
+  }
+
+  .historia {
+    padding: 0 50px 50px;
+
+    .img-text {
+      @include img-text();
+
+      .text-hist {
+        p {
+          @include text-hist-p();
+        }
+      }
+
+      .foto-wc {
+        height: 100%;
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+
+    .img-texto {
+      @include img-text();
+
+      .texto-hist {
+        p {
+          @include text-hist-p();
+        }
+      }
+
+      .fot-wc {
+        height: 100%;
+        width: 100%;
+        margin-top: 70px;
+      }
+    }
+  }
+
+  .excelencia {
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    position: relative;
+
+    .img-tex {
+      .barra-rosa {
+        @include barra-rosa();
+
+        h3 {
+          @include barra-h3();
+        }
+      }
+    }
+  }
+}
+//
+//
+//                   MEDIA QUERIES
+//
+//
+/*  Dispositivos medianos (tabletas, 841px y más) */
+@media (max-width: 991px) {
+  .wanda .img-wanda .top-img .frase {
+    left: 190px;
+    top: 55px;
+    width: 35%;
+  }
+
+  .excelencia .img-tex .barra-rosa h3 {
+    font-size: $tam-2;
+  }
+}
+//
+//
+/* Dispositivos medianos (tabletas, 768px y más) */
+@media screen and (max-width: 840px) {
+  .wanda {
+    .img-wanda .top-img .frase {
+      left: 150px;
+
+      p {
+        font-size: 25px;
+      }
+    }
+
+    .excelencia .img-tex .barra-rosa {
+      height: 100px;
+      padding: 35px;
+
+      h3 {
+        font-size: $tam-2;
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos pequeños (teléfonos horizontales and tabletas, 697px y más) */
+@media screen and (max-width: 767px) {
+  .wanda {
+    .nombre h1 {
+      font-size: $tam-2;
+    }
+
+    .historia {
+      .img-text .foto-wc {
+        margin-bottom: 30px;
+      }
+
+      .img-texto .fot-wc {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, 597px y más) */
+@media screen and (max-width: 696px) {
+  .wanda {
+    .img-wanda .top-img .frase {
+      left: 100px;
+      width: 40%;
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .excelencia .img-tex .barra-rosa {
+      height: 90px;
+      padding: 30px 0 30px 30px;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, 509px y más) */
+@media screen and (max-width: 596px) {
+  .img-wanda .top-img .frase {
+    left: 60px !important;
+    width: 45% !important;
+
+    p {
+      font-size: $tam-1;
+    }
+  }
+
+  .excelencia .img-tex .barra-rosa {
+    height: 95px !important;
+    padding: 25px 80px 25px 80px !important;
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, 426px y mas) */
+@media screen and (max-width: 508px) {
+  .wanda {
+    .img-wanda .top-img .frase {
+      top: 40px;
+
+      p {
+        font-size: $tam-2;
+      }
+    }
+
+    .excelencia .img-tex .barra-rosa {
+      padding: 25px 55px 25px 55px !important;
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, 359px y más) */
+@media screen and (max-width: 425px) {
+  .wanda {
+    .img-wanda .top-img .frase {
+      left: 35px !important;
+      top: 30px;
+      width: 30% !important;
+    }
+
+    .excelencia .img-tex .barra-rosa {
+      padding: 20px 35px 20px 35px !important;
+
+      p {
+        font-size: $tam-1 !important;
+      }
+    }
+  }
+}
+//
+//
+/* Dispositivos extra pequeños (teléfonos verticales, menos de 359px) */
+@media screen and (max-width: 359px) {
+  .img-wanda .top-img .frase {
+    top: 10px !important;
+  }
+  .excelencia .img-tex .barra-rosa {
+    padding: 10px 10px 10px 10px !important; //no funciona
+
+    p {
+      font-size: 12px !important; //no funciona
+    }
+  }
+}
