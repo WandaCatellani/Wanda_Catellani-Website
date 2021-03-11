@@ -45,7 +45,6 @@
     padding: 0;
 
     .articulos {
-      /* margin-bottom: 5rem; */
       margin-top: 3rem;
 
       .foto {
@@ -60,8 +59,8 @@
         .hover {
           @include hover();
 
-          h1 {
-            @include art-foto-h1();
+          h4 {
+            @include art-foto-h4();
           }
 
           p {

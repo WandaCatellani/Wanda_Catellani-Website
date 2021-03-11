@@ -11,8 +11,8 @@
       .bloque-negro {
         @include bloque-negro();
 
-        h1 {
-          @include bloque-negro-h1();
+        h2 {
+          @include bloque-negro-h2();
         }
 
         p {
@@ -29,8 +29,8 @@
         margin-bottom: 15px;
         margin-top: 0;
 
-        h1 {
-          @include bloque-negro-h1();
+        h2 {
+          @include bloque-negro-h2();
           color: $color-pri;
         }
 
